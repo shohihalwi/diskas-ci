@@ -23,6 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+
+// ganti ini dengan URL sesuai localhost lo contoh:
+// http://localhost/diskas-ci
+
 $config['base_url'] = 'http://belajar-ci.test';
 
 /*
