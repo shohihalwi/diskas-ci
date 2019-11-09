@@ -1,4 +1,4 @@
-<div class="container mt-4" style="padding-top: 100px;">
+<div class="container" style="padding-top: 100px;">
 
 <div class="row">
     <div class="col-md-8 offset-md-2">

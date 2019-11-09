@@ -1,9 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark black w-100 navbar-scrollable">
+<nav class="navbar navbar-expand-lg navbar-light white w-100 border-bottom navbar-scrollable">
         <div class="container">
-            <a class="navbar-brand" href="index.php">
-
-            <a class="navbar-brand" href="<?= base_url() ?>">
-                <img src="https://works.alfathony.com/tugas-web-enterprise/assets/img/logo-light.svg" alt="">
+            <a class="navbar-brand d-flex align-items-center" href="<?= base_url() ?>">
+                <img src="<?= base_url('assets/images/eventmercubuana-logo.svg') ?>" alt="logo mercubuana" style="height: 38px; margin-right: 8px">
                 <span class="g-sans-regular">Mercubuana Events</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

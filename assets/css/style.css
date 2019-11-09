@@ -2,6 +2,10 @@ body {
     margin: 0px;
 }
 
+html, body, header, .view {
+    height: 100%;
+}
+
 .g-sans-regular {
     font-family: "Product Sans Regular", sans-serif;
 }
@@ -19,7 +23,8 @@ nav {
     transition: background .3s ease-in-out, padding-top .3s ease-in-out, padding-bottom .3s, color .3s ease-in-out, padding-bottom .3s;
     position: fixed;
     z-index: 9;
-    padding: 16px 0px;
+    padding: 16px 1rem;
+    box-shadow: none;
 }
 
 .navbar.fixed-top {
@@ -28,11 +33,6 @@ nav {
 
 .linkputih {
     padding: 8px;
-    color: white;
-}
-
-.dropdown {
-    background: #1A2C43;
     color: white;
 }
 
@@ -153,6 +153,10 @@ transform: scale(1.06) rotate(0deg);
     color: #333;
     font-size: 16px;
     margin-bottom: 6px
+}
+
+.btn{
+    border-radius: 5px;
 }
 
 .cart_btn {
@@ -283,3 +287,112 @@ transform: scale(1.06) rotate(0deg);
 .material-icons.md-green {
     color: #00C084;
 }
+
+/* Coming Soon */
+
+.comingsoon h1{
+    /*font-size: 40px;*/
+}
+
+/* Animation typing for home page */
+.typing,
+.typing-item {
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+.typing {
+    overflow: hidden;
+    display: inline-block;
+    background-color: #ffffff;
+}
+
+.typing-item {
+    position: relative;
+    transition: all .3s ease-in-out;
+    animation: animatetotop 6s steps(3) infinite;
+}
+
+.typing-item_inner,
+.typing-item-overlay {
+    display: inline-block;
+}
+
+.typing-item_inner {
+    position: relative;
+}
+
+.typing-item_inner:after {
+    content: "";
+    position: absolute;
+    top:-1px;right:0;bottom:-2px;left:0;
+    border-left: 1px solid #121212;
+    background-color: #ffffff;
+    animation: animatetoright 1s steps(10) infinite alternate;
+}
+
+@keyframes animatetoright {
+    0% {
+        left: 0;
+        margin-right: auto;
+    }
+    100% {
+        left: 100%;
+        margin-left: .6em;
+        margin-right: -.6em;
+    }
+}
+
+@keyframes animatetotop {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -122px;
+    }
+}
+
+/* End: Animation typing for home page */
+
+/* Override Google Btn Login */
+
+.abcRioButton{
+    border-radius: 4px !important;
+}
+
+/* End: Override Google Btn Login */
+
+/* Responsive */
+
+
+@media (max-width: 544px) {
+    .comingsoon{
+        height: 75% !important;
+    }
+    .display-4{
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 544px) {
+    .class-name {font-size: 16px;}
+    .comingsoon{
+
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+
+    }
+
+/* end: Responsive */
