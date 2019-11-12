@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends My_Controller {
+class Dashboard extends My_Controller {
 
 	public function index()
 	{
@@ -11,8 +11,10 @@ class Admin extends My_Controller {
 
     public function events()
     {
-        $query = $this->db->get('event')->result_array();
+        // Get query return to array
+        $query = $this->db->get('events')->result_array();
 
+        // Declare variable for view
         $data['events'] = $query;
 
         $this->render_page_admin('admin/events/list', $data);
@@ -26,7 +28,12 @@ class Admin extends My_Controller {
 
     public function users()
     {
-        $data = null;
+        // Get query return to array
+        $query = $this->db->get('users')->result_array();
+
+        // Declare variable for view
+        $data['users'] = $query;
+
         $this->render_page_admin('admin/users/list', $data);
     }
 

@@ -1,9 +1,8 @@
-<div style="height: 150px"></div>
 <section class="">
     <div class="container">
         <h2>Semua Event</h2>
 
-        <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <table id="dt" class="table table-hover table-bordered bg-white" cellspacing="0" width="100%">
             <thead>
             <tr>
                 <th class="th-sm">Nama Event
@@ -28,12 +27,12 @@
 
                     <tr>
                         <td><?php echo $value['nama_event'] ?></td>
-                        <td><?php echo $value['katagori_id'] ?></td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
+                        <td><?php echo $value['kategori_id'] ?></td>
+                        <td><?php echo $value['tanggal'] ?></td>
+                        <td><?php echo $value['diselenggarakan_oleh'] ?></td>
+                        <td><?php echo $value['lokasi'] ?></td>
                         <td>
-                            <a href="<?= base_url('admin/events/detail') ?>" class="btn btn-outline-primary btn-sm shadow-none">Detail</a>
+                            <a href="<?= base_url('admin/events/detail/'.$value['event_id']) ?>" class="btn btn-outline-primary btn-sm shadow-none">Detail</a>
                         </td>
                     </tr>
 

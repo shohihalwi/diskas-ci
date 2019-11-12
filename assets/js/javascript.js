@@ -42,6 +42,6 @@ $(document).ready(function (e) {
 });
 
 $(document).ready(function () {
-    $('#dtBasicExample').DataTable();
+    $('#dt').DataTable();
     $('.dataTables_length').addClass('bs-select');
 });
