@@ -2490,7 +2490,7 @@ calendar:
     terms:
       - calendar-o
       - date
-      - event
+      - events
       - schedule
       - time
       - when
@@ -2511,7 +2511,7 @@ calendar-alt:
     terms:
       - calendar
       - date
-      - event
+      - events
       - schedule
       - time
       - when
@@ -2535,7 +2535,7 @@ calendar-check:
       - correct
       - date
       - done
-      - event
+      - events
       - ok
       - schedule
       - select
@@ -2558,7 +2558,7 @@ calendar-day:
     terms:
       - date
       - detail
-      - event
+      - events
       - focus
       - schedule
       - single day
@@ -2580,7 +2580,7 @@ calendar-minus:
       - calendar
       - date
       - delete
-      - event
+      - events
       - negative
       - remove
       - schedule
@@ -2603,7 +2603,7 @@ calendar-plus:
       - calendar
       - create
       - date
-      - event
+      - events
       - new
       - positive
       - schedule
@@ -2626,7 +2626,7 @@ calendar-times:
       - calendar
       - date
       - delete
-      - event
+      - events
       - remove
       - schedule
       - time
@@ -2646,7 +2646,7 @@ calendar-week:
     terms:
       - date
       - detail
-      - event
+      - events
       - focus
       - schedule
       - single week

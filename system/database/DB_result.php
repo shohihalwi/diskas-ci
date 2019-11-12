@@ -237,7 +237,7 @@ class CI_DB_result {
 			return $this->result_object;
 		}
 
-		// In the event that query caching is on, the result_id variable
+		// In the events that query caching is on, the result_id variable
 		// will not be a valid resource so we'll simply return an empty
 		// array.
 		if ( ! $this->result_id OR $this->num_rows === 0)
@@ -278,7 +278,7 @@ class CI_DB_result {
 			return $this->result_array;
 		}
 
-		// In the event that query caching is on, the result_id variable
+		// In the events that query caching is on, the result_id variable
 		// will not be a valid resource so we'll simply return an empty
 		// array.
 		if ( ! $this->result_id OR $this->num_rows === 0)

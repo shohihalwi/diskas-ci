@@ -39,5 +39,9 @@ $(document).ready(function (e) {
     }
     document.onscroll = scroll;
 
+});
 
+$(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+    $('.dataTables_length').addClass('bs-select');
 });

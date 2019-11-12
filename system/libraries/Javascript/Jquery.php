@@ -125,9 +125,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Blur
 	 *
-	 * Outputs a jQuery blur event
+	 * Outputs a jQuery blur events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -141,9 +141,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Change
 	 *
-	 * Outputs a jQuery change event
+	 * Outputs a jQuery change events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -157,9 +157,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Click
 	 *
-	 * Outputs a jQuery click event
+	 * Outputs a jQuery click events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @param	bool	whether or not to return false
 	 * @return	string
@@ -181,9 +181,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Double Click
 	 *
-	 * Outputs a jQuery dblclick event
+	 * Outputs a jQuery dblclick events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -197,9 +197,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Error
 	 *
-	 * Outputs a jQuery error event
+	 * Outputs a jQuery error events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -213,9 +213,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Focus
 	 *
-	 * Outputs a jQuery focus event
+	 * Outputs a jQuery focus events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -229,7 +229,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Hover
 	 *
-	 * Outputs a jQuery hover event
+	 * Outputs a jQuery hover events
 	 *
 	 * @param	string	- element
 	 * @param	string	- Javascript code for mouse over
@@ -250,9 +250,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Keydown
 	 *
-	 * Outputs a jQuery keydown event
+	 * Outputs a jQuery keydown events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -266,9 +266,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Keyup
 	 *
-	 * Outputs a jQuery keydown event
+	 * Outputs a jQuery keydown events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -282,9 +282,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Load
 	 *
-	 * Outputs a jQuery load event
+	 * Outputs a jQuery load events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -298,9 +298,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Mousedown
 	 *
-	 * Outputs a jQuery mousedown event
+	 * Outputs a jQuery mousedown events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -314,9 +314,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Mouse Out
 	 *
-	 * Outputs a jQuery mouseout event
+	 * Outputs a jQuery mouseout events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -330,9 +330,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Mouse Over
 	 *
-	 * Outputs a jQuery mouseover event
+	 * Outputs a jQuery mouseover events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -346,9 +346,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Mouseup
 	 *
-	 * Outputs a jQuery mouseup event
+	 * Outputs a jQuery mouseup events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -385,9 +385,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Resize
 	 *
-	 * Outputs a jQuery resize event
+	 * Outputs a jQuery resize events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -401,9 +401,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Scroll
 	 *
-	 * Outputs a jQuery scroll event
+	 * Outputs a jQuery scroll events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -417,9 +417,9 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Unload
 	 *
-	 * Outputs a jQuery unload event
+	 * Outputs a jQuery unload events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -435,7 +435,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Add Class
 	 *
-	 * Outputs a jQuery addClass event
+	 * Outputs a jQuery addClass events
 	 *
 	 * @param	string	$element
 	 * @param	string	$class
@@ -452,7 +452,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Animate
 	 *
-	 * Outputs a jQuery animate event
+	 * Outputs a jQuery animate events
 	 *
 	 * @param	string	$element
 	 * @param	array	$params
@@ -492,7 +492,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Fade In
 	 *
-	 * Outputs a jQuery hide event
+	 * Outputs a jQuery hide events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -517,7 +517,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Fade Out
 	 *
-	 * Outputs a jQuery hide event
+	 * Outputs a jQuery hide events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -567,7 +567,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Remove Class
 	 *
-	 * Outputs a jQuery remove class event
+	 * Outputs a jQuery remove class events
 	 *
 	 * @param	string	$element
 	 * @param	string	$class
@@ -584,7 +584,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Slide Up
 	 *
-	 * Outputs a jQuery slideUp event
+	 * Outputs a jQuery slideUp events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -609,7 +609,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Slide Down
 	 *
-	 * Outputs a jQuery slideDown event
+	 * Outputs a jQuery slideDown events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -634,7 +634,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Slide Toggle
 	 *
-	 * Outputs a jQuery slideToggle event
+	 * Outputs a jQuery slideToggle events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -659,7 +659,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Toggle
 	 *
-	 * Outputs a jQuery toggle event
+	 * Outputs a jQuery toggle events
 	 *
 	 * @param	string	- element
 	 * @return	string
@@ -675,7 +675,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Toggle Class
 	 *
-	 * Outputs a jQuery toggle class event
+	 * Outputs a jQuery toggle class events
 	 *
 	 * @param	string	$element
 	 * @param	string	$class
@@ -692,7 +692,7 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Show
 	 *
-	 * Outputs a jQuery show event
+	 * Outputs a jQuery show events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -720,7 +720,7 @@ class CI_Jquery extends CI_Javascript {
 	 * An Ajax call that populates the designated DOM node with
 	 * returned content
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	the controller to run the call against
 	 * @param	string	optional parameters
 	 * @return	string
@@ -922,11 +922,11 @@ class CI_Jquery extends CI_Javascript {
 	/**
 	 * Add Event
 	 *
-	 * Constructs the syntax for an event, and adds to into the array for compilation
+	 * Constructs the syntax for an events, and adds to into the array for compilation
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
-	 * @param	string	The event to pass
+	 * @param	string	The events to pass
 	 * @return	string
 	 */
 	protected function _add_event($element, $js, $event)

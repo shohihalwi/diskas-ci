@@ -45,7 +45,7 @@
 		this.$element = $(element);
 
 		/**
-		 * Proxied event handlers.
+		 * Proxied events handlers.
 		 * @protected
 		 */
 		this._handlers = {};
@@ -531,7 +531,7 @@
 		this.initializeStage();
 		this.initializeItems();
 
-		// register event handlers
+		// register events handlers
 		this.registerEventHandlers();
 
 		this.leave('initializing');
@@ -604,7 +604,7 @@
 
 	/**
 	 * Prepares an item before add.
-	 * @todo Rename event parameter `content` to `item`.
+	 * @todo Rename events parameter `content` to `item`.
 	 * @protected
 	 * @returns {jQuery|HTMLElement} - The item container.
 	 */
@@ -683,7 +683,7 @@
 	};
 
 	/**
-	 * Checks window `resize` event.
+	 * Checks window `resize` events.
 	 * @protected
 	 */
 	Owl.prototype.onThrottledResize = function() {
@@ -692,7 +692,7 @@
 	};
 
 	/**
-	 * Checks window `resize` event.
+	 * Checks window `resize` events.
 	 * @protected
 	 */
 	Owl.prototype.onResize = function() {
@@ -724,7 +724,7 @@
 	};
 
 	/**
-	 * Registers event handlers.
+	 * Registers events handlers.
 	 * @todo Check `msPointerEnabled`
 	 * @todo #261
 	 * @protected
@@ -755,7 +755,7 @@
 	 * @todo Horizontal swipe threshold as option
 	 * @todo #261
 	 * @protected
-	 * @param {Event} event - The event arguments.
+	 * @param {Event} event - The events arguments.
 	 */
 	Owl.prototype.onDragStart = function(event) {
 		var stage = null;
@@ -817,7 +817,7 @@
 	 * Handles the `touchmove` and `mousemove` events.
 	 * @todo #261
 	 * @protected
-	 * @param {Event} event - The event arguments.
+	 * @param {Event} event - The events arguments.
 	 */
 	Owl.prototype.onDragMove = function(event) {
 		var minimum = null,
@@ -851,9 +851,9 @@
 	/**
 	 * Handles the `touchend` and `mouseup` events.
 	 * @todo #261
-	 * @todo Threshold for click event
+	 * @todo Threshold for click events
 	 * @protected
-	 * @param {Event} event - The event arguments.
+	 * @param {Event} event - The events arguments.
 	 */
 	Owl.prototype.onDragEnd = function(event) {
 		var delta = this.difference(this._drag.pointer, this.pointer(event)),
@@ -1302,15 +1302,15 @@
 	/**
 	 * Handles the end of an animation.
 	 * @protected
-	 * @param {Event} event - The event arguments.
+	 * @param {Event} event - The events arguments.
 	 */
 	Owl.prototype.onTransitionEnd = function(event) {
 
-		// if css2 animation then event object is undefined
+		// if css2 animation then events object is undefined
 		if (event !== undefined) {
 			event.stopPropagation();
 
-			// Catch only owl-stage transitionEnd event
+			// Catch only owl-stage transitionEnd events
 			if ((event.target || event.srcElement || event.originalTarget) !== this.$stage.get(0)) {
 				return false;
 			}
@@ -1372,7 +1372,7 @@
 
 	/**
 	 * Adds an item.
-	 * @todo Use `item` instead of `content` for the event arguments.
+	 * @todo Use `item` instead of `content` for the events arguments.
 	 * @public
 	 * @param {HTMLElement|jQuery|String} content - The item content to add.
 	 * @param {Number} [position] - The relative position at which to insert the item otherwise the item will be added to the end.
@@ -1407,7 +1407,7 @@
 
 	/**
 	 * Removes an item by its position.
-	 * @todo Use `item` instead of `content` for the event arguments.
+	 * @todo Use `item` instead of `content` for the events arguments.
 	 * @public
 	 * @param {Number} position - The relative position of the item to remove.
 	 */
@@ -1507,12 +1507,12 @@
 	};
 
 	/**
-	 * Attaches to an internal event.
+	 * Attaches to an internal events.
 	 * @protected
-	 * @param {HTMLElement} element - The event source.
-	 * @param {String} event - The event name.
-	 * @param {Function} listener - The event handler to attach.
-	 * @param {Boolean} capture - Wether the event should be handled at the capturing phase or not.
+	 * @param {HTMLElement} element - The events source.
+	 * @param {String} event - The events name.
+	 * @param {Function} listener - The events handler to attach.
+	 * @param {Boolean} capture - Wether the events should be handled at the capturing phase or not.
 	 */
 	Owl.prototype.on = function(element, event, listener, capture) {
 		if (element.addEventListener) {
@@ -1523,12 +1523,12 @@
 	};
 
 	/**
-	 * Detaches from an internal event.
+	 * Detaches from an internal events.
 	 * @protected
-	 * @param {HTMLElement} element - The event source.
-	 * @param {String} event - The event name.
-	 * @param {Function} listener - The attached event handler to detach.
-	 * @param {Boolean} capture - Wether the attached event handler was registered as a capturing listener or not.
+	 * @param {HTMLElement} element - The events source.
+	 * @param {String} event - The events name.
+	 * @param {Function} listener - The attached events handler to detach.
+	 * @param {Boolean} capture - Wether the attached events handler was registered as a capturing listener or not.
 	 */
 	Owl.prototype.off = function(element, event, listener, capture) {
 		if (element.removeEventListener) {
@@ -1539,15 +1539,15 @@
 	};
 
 	/**
-	 * Triggers a public event.
+	 * Triggers a public events.
 	 * @todo Remove `status`, `relatedTarget` should be used instead.
 	 * @protected
-	 * @param {String} name - The event name.
-	 * @param {*} [data=null] - The event data.
-	 * @param {String} [namespace=carousel] - The event namespace.
-	 * @param {String} [state] - The state which is associated with the event.
+	 * @param {String} name - The events name.
+	 * @param {*} [data=null] - The events data.
+	 * @param {String} [namespace=carousel] - The events namespace.
+	 * @param {String} [state] - The state which is associated with the events.
 	 * @param {Boolean} [enter=false] - Indicates if the call enters the specified state or not.
-	 * @returns {Event} - The event arguments.
+	 * @returns {Event} - The events arguments.
 	 */
 	Owl.prototype.trigger = function(name, data, namespace, state, enter) {
 		var status = {
@@ -1603,9 +1603,9 @@
 	};
 
 	/**
-	 * Registers an event or state.
+	 * Registers an events or state.
 	 * @public
-	 * @param {Object} object - The event or state to register.
+	 * @param {Object} object - The events or state to register.
 	 */
 	Owl.prototype.register = function(object) {
 		if (object.type === Owl.Type.Event) {
@@ -1659,10 +1659,10 @@
 	};
 
 	/**
-	 * Gets unified pointer coordinates from event.
+	 * Gets unified pointer coordinates from events.
 	 * @todo #261
 	 * @protected
-	 * @param {Event} - The `mousedown` or `touchstart` event.
+	 * @param {Event} - The `mousedown` or `touchstart` events.
 	 * @returns {Object} - Contains `x` and `y` coordinates of current pointer position.
 	 */
 	Owl.prototype.pointer = function(event) {
@@ -1791,7 +1791,7 @@
 		this._visible = null;
 
 		/**
-		 * All event handlers.
+		 * All events handlers.
 		 * @protected
 		 * @type {Object}
 		 */
@@ -1806,7 +1806,7 @@
 		// set default options
 		this._core.options = $.extend({}, AutoRefresh.Defaults, this._core.options);
 
-		// register event handlers
+		// register events handlers
 		this._core.$element.on(this._handlers);
 	};
 
@@ -1940,7 +1940,7 @@
 		// set the default options
 		this._core.options = $.extend({}, Lazy.Defaults, this._core.options);
 
-		// register event handler
+		// register events handler
 		this._core.$element.on(this._handlers);
 	};
 
@@ -2041,7 +2041,7 @@
 		this._previousHeight = null;
 
 		/**
-		 * All event handlers.
+		 * All events handlers.
 		 * @protected
 		 * @type {Object}
 		 */
@@ -2067,7 +2067,7 @@
 		// set default options
 		this._core.options = $.extend({}, AutoHeight.Defaults, this._core.options);
 
-		// register event handlers
+		// register events handlers
 		this._core.$element.on(this._handlers);
 		this._intervalId = null;
 		var refThis = this;
@@ -2186,7 +2186,7 @@
 		this._playing = null;
 
 		/**
-		 * All event handlers.
+		 * All events handlers.
 		 * @todo The cloned content removale is too late
 		 * @protected
 		 * @type {Object}
@@ -2229,7 +2229,7 @@
 		// set default options
 		this._core.options = $.extend({}, Video.Defaults, this._core.options);
 
-		// register event handlers
+		// register events handlers
 		this._core.$element.on(this._handlers);
 
 		this._core.$element.on('click.owl.video', '.owl-video-play-icon', $.proxy(function(e) {
@@ -2406,7 +2406,7 @@
 	/**
 	 * Starts the current video.
 	 * @public
-	 * @param {Event} event - The event arguments.
+	 * @param {Event} event - The events arguments.
 	 */
 	Video.prototype.play = function(event) {
 		var target = $(event.target),
@@ -2651,7 +2651,7 @@
 		this._paused = true;
 
 		/**
-		 * All event handlers.
+		 * All events handlers.
 		 * @protected
 		 * @type {Object}
 		 */
@@ -2706,7 +2706,7 @@
 			}, this)
 		};
 
-		// register event handlers
+		// register events handlers
 		this._core.$element.on(this._handlers);
 
 		// set default options
@@ -2902,7 +2902,7 @@
 		};
 
 		/**
-		 * All event handlers.
+		 * All events handlers.
 		 * @protected
 		 * @type {Object}
 		 */
@@ -2951,7 +2951,7 @@
 		// set default options
 		this._core.options = $.extend({}, Navigation.Defaults, this._core.options);
 
-		// register event handlers
+		// register events handlers
 		this.$element.on(this._handlers);
 	};
 
@@ -3150,9 +3150,9 @@
 	};
 
 	/**
-	 * Extends event data.
+	 * Extends events data.
 	 * @protected
-	 * @param {Event} event - The event object which gets thrown.
+	 * @param {Event} event - The events object which gets thrown.
 	 */
 	Navigation.prototype.onTrigger = function(event) {
 		var settings = this._core.settings;
@@ -3277,7 +3277,7 @@
 		this.$element = this._core.$element;
 
 		/**
-		 * All event handlers.
+		 * All events handlers.
 		 * @protected
 		 * @type {Object}
 		 */
@@ -3317,10 +3317,10 @@
 		// set default options
 		this._core.options = $.extend({}, Hash.Defaults, this._core.options);
 
-		// register the event handlers
+		// register the events handlers
 		this.$element.on(this._handlers);
 
-		// register event listener for hash navigation
+		// register events listener for hash navigation
 		$(window).on('hashchange.owl.navigation', $.proxy(function(e) {
 			var hash = window.location.hash.substring(1),
 				items = this._core.$stage.children(),

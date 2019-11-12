@@ -681,7 +681,7 @@ if ( ! function_exists('form_prep'))
 	/**
 	 * Form Prep
 	 *
-	 * Formats text so that it can be safely placed in a form field in the event it has HTML tags.
+	 * Formats text so that it can be safely placed in a form field in the events it has HTML tags.
 	 *
 	 * @deprecated	3.0.0	An alias for html_escape()
 	 * @param	string|string[]	$str		Value to escape

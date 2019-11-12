@@ -153,7 +153,7 @@ class CI_DB_mssql_driver extends CI_DB {
 			$database = $this->database;
 		}
 
-		// Note: Escaping is required in the event that the DB name
+		// Note: Escaping is required in the events that the DB name
 		// contains reserved characters.
 		if (mssql_select_db('['.$database.']', $this->conn_id))
 		{

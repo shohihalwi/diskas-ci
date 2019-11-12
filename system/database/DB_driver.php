@@ -856,7 +856,7 @@ abstract class CI_DB_driver {
 			return FALSE;
 		}
 
-		// The query() function will set this flag to FALSE in the event that a query failed
+		// The query() function will set this flag to FALSE in the events that a query failed
 		if ($this->_trans_status === FALSE OR $this->_trans_failure === TRUE)
 		{
 			$this->trans_rollback();

@@ -4982,9 +4982,9 @@ module.exports = function(Chart) {
 		},
 
 		/**
-		 * Handle an event
+		 * Handle an events
 		 * @private
-		 * @param {IEvent} event the event to handle
+		 * @param {IEvent} events the events to handle
 		 * @return {Boolean} true if the chart needs to re-render
 		 */
 		handleEvent: function(e) {
@@ -5003,7 +5003,7 @@ module.exports = function(Chart) {
 			}
 
 			// Invoke onHover hook
-			// Need to call with native event here to not break backwards compatibility
+			// Need to call with native events here to not break backwards compatibility
 			helpers.callback(options.onHover || options.hover.onHover, [e.native, me.active], me);
 
 			if (e.type === 'mouseup' || e.type === 'click') {
@@ -5094,7 +5094,7 @@ module.exports = function(Chart) {
 	}
 
 	/**
-	 * Removes the given array event listener and cleanup extra attached properties (such as
+	 * Removes the given array events listener and cleanup extra attached properties (such as
 	 * the _chartjs stub and overridden methods) if array doesn't have any more listeners.
 	 */
 	function unlistenArrayEvents(array, listener) {
@@ -6146,10 +6146,10 @@ module.exports = function() {
 var helpers = require(46);
 
 /**
- * Helper function to get relative position for an event
- * @param {Event|IEvent} event - The event to get the position for
+ * Helper function to get relative position for an events
+ * @param {Event|IEvent} events - The events to get the position for
  * @param {Chart} chart - The chart
- * @returns {Point} the event position
+ * @returns {Point} the events position
  */
 function getRelativePosition(e, chart) {
 	if (e.native) {
@@ -6187,7 +6187,7 @@ function parseVisibleItems(chart, handler) {
 }
 
 /**
- * Helper function to get the items that intersect the event position
+ * Helper function to get the items that intersect the events position
  * @param items {ChartElement[]} elements to filter
  * @param position {Point} the point to be nearest to
  * @return {ChartElement[]} the nearest items
@@ -6205,7 +6205,7 @@ function getIntersectItems(chart, position) {
 }
 
 /**
- * Helper function to get the items nearest to the event position considering all visible items in teh chart
+ * Helper function to get the items nearest to the events position considering all visible items in teh chart
  * @param chart {Chart} the chart to look at elements from
  * @param position {Point} the point to be nearest to
  * @param intersect {Boolean} if true, only consider items that intersect the position
@@ -6323,7 +6323,7 @@ module.exports = {
 		 * @function Chart.Interaction.modes.index
 		 * @since v2.4.0
 		 * @param chart {chart} the chart we are returning items from
-		 * @param e {Event} the event we are find things at
+		 * @param e {Event} the events we are find things at
 		 * @param options {IInteractionOptions} options to use during interaction
 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
 		 */
@@ -6334,7 +6334,7 @@ module.exports = {
 		 * If the options.intersect is false, we find the nearest item and return the items in that dataset
 		 * @function Chart.Interaction.modes.dataset
 		 * @param chart {chart} the chart we are returning items from
-		 * @param e {Event} the event we are find things at
+		 * @param e {Event} the events we are find things at
 		 * @param options {IInteractionOptions} options to use during interaction
 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
 		 */
@@ -6362,11 +6362,11 @@ module.exports = {
 		},
 
 		/**
-		 * Point mode returns all elements that hit test based on the event position
-		 * of the event
+		 * Point mode returns all elements that hit test based on the events position
+		 * of the events
 		 * @function Chart.Interaction.modes.intersect
 		 * @param chart {chart} the chart we are returning items from
-		 * @param e {Event} the event we are find things at
+		 * @param e {Event} the events we are find things at
 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
 		 */
 		point: function(chart, e) {
@@ -6378,7 +6378,7 @@ module.exports = {
 		 * nearest mode returns the element closest to the point
 		 * @function Chart.Interaction.modes.intersect
 		 * @param chart {chart} the chart we are returning items from
-		 * @param e {Event} the event we are find things at
+		 * @param e {Event} the events we are find things at
 		 * @param options {IInteractionOptions} options to use
 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
 		 */
@@ -6388,7 +6388,7 @@ module.exports = {
 			var distanceMetric = getDistanceMetricForAxis(options.axis);
 			var nearestItems = getNearestItems(chart, position, options.intersect, distanceMetric);
 
-			// We have multiple items at the same distance from the event. Now sort by smallest
+			// We have multiple items at the same distance from the events. Now sort by smallest
 			if (nearestItems.length > 1) {
 				nearestItems.sort(function(a, b) {
 					var sizeA = a.getArea();
@@ -6412,7 +6412,7 @@ module.exports = {
 		 * x mode returns the elements that hit-test at the current x coordinate
 		 * @function Chart.Interaction.modes.x
 		 * @param chart {chart} the chart we are returning items from
-		 * @param e {Event} the event we are find things at
+		 * @param e {Event} the events we are find things at
 		 * @param options {IInteractionOptions} options to use
 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
 		 */
@@ -6443,7 +6443,7 @@ module.exports = {
 		 * y mode returns the elements that hit-test at the current y coordinate
 		 * @function Chart.Interaction.modes.y
 		 * @param chart {chart} the chart we are returning items from
-		 * @param e {Event} the event we are find things at
+		 * @param e {Event} the events we are find things at
 		 * @param options {IInteractionOptions} options to use
 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
 		 */
@@ -7300,18 +7300,18 @@ module.exports = {
  */
 /**
  * @method IPlugin#beforeEvent
- * @desc Called before processing the specified `event`. If any plugin returns `false`,
- * the event will be discarded.
+ * @desc Called before processing the specified `events`. If any plugin returns `false`,
+ * the events will be discarded.
  * @param {Chart.Controller} chart - The chart instance.
- * @param {IEvent} event - The event object.
+ * @param {IEvent} events - The events object.
  * @param {Object} options - The plugin options.
  */
 /**
  * @method IPlugin#afterEvent
- * @desc Called after the `event` has been consumed. Note that this hook
- * will not be called if the `event` has been previously discarded.
+ * @desc Called after the `events` has been consumed. Note that this hook
+ * will not be called if the `events` has been previously discarded.
  * @param {Chart.Controller} chart - The chart instance.
- * @param {IEvent} event - The event object.
+ * @param {IEvent} events - The events object.
  * @param {Object} options - The plugin options.
  */
 /**
@@ -8520,10 +8520,10 @@ var positioners = {
 	},
 
 	/**
-	 * Gets the tooltip position nearest of the item nearest to the event position
+	 * Gets the tooltip position nearest of the item nearest to the events position
 	 * @function Chart.Tooltip.positioners.nearest
 	 * @param elements {Chart.Element[]} the tooltip elements
-	 * @param eventPosition {Point} the position of the event in canvas coordinates
+	 * @param eventPosition {Point} the position of the events in canvas coordinates
 	 * @returns {Point} the tooltip position
 	 */
 	nearest: function(elements, eventPosition) {
@@ -9315,9 +9315,9 @@ var exports = module.exports = Element.extend({
 	},
 
 	/**
-	 * Handle an event
+	 * Handle an events
 	 * @private
-	 * @param {IEvent} event - The event to handle
+	 * @param {IEvent} events - The events to handle
 	 * @returns {Boolean} true if the tooltip changed
 	 */
 	handleEvent: function(e) {
@@ -9337,7 +9337,7 @@ var exports = module.exports = Element.extend({
 		// Remember Last Actives
 		changed = !helpers.arrayEquals(me._active, me._lastActive);
 
-		// Only handle target event on tooltip change
+		// Only handle target events on tooltip change
 		if (changed) {
 			me._lastActive = me._active;
 
@@ -10826,7 +10826,7 @@ var CSS_RENDER_ANIMATION = CSS_PREFIX + 'render-animation';
 var ANIMATION_START_EVENTS = ['animationstart', 'webkitAnimationStart'];
 
 /**
- * DOM event types -> Chart.js event types.
+ * DOM events types -> Chart.js events types.
  * Note: only events with different types are mapped.
  * @see https://developer.mozilla.org/en-US/docs/Web/Events
  */
@@ -11212,7 +11212,7 @@ module.exports = {
 	addEventListener: function(chart, type, listener) {
 		var canvas = chart.canvas;
 		if (type === 'resize') {
-			// Note: the resize event is not supported on all browsers.
+			// Note: the resize events is not supported on all browsers.
 			addResizeListener(canvas, listener, chart);
 			return;
 		}
@@ -11229,7 +11229,7 @@ module.exports = {
 	removeEventListener: function(chart, type, listener) {
 		var canvas = chart.canvas;
 		if (type === 'resize') {
-			// Note: the resize event is not supported on all browsers.
+			// Note: the resize events is not supported on all browsers.
 			removeResizeListener(canvas, listener);
 			return;
 		}
@@ -11309,10 +11309,10 @@ module.exports = helpers.extend({
 
 	/**
 	 * Registers the specified listener on the given chart.
-	 * @param {Chart} chart - Chart from which to listen for event
+	 * @param {Chart} chart - Chart from which to listen for events
 	 * @param {String} type - The ({@link IEvent}) type to listen for
 	 * @param {Function} listener - Receives a notification (an object that implements
-	 * the {@link IEvent} interface) when an event of the specified type occurs.
+	 * the {@link IEvent} interface) when an events of the specified type occurs.
 	 */
 	addEventListener: function() {},
 
@@ -11320,7 +11320,7 @@ module.exports = helpers.extend({
 	 * Removes the specified listener previously registered with addEventListener.
 	 * @param {Chart} chart -Chart from which to remove the listener
 	 * @param {String} type - The ({@link IEvent}) type to remove
-	 * @param {Function} listener - The listener function to remove from the event target.
+	 * @param {Function} listener - The listener function to remove from the events target.
 	 */
 	removeEventListener: function() {}
 
@@ -11337,10 +11337,10 @@ module.exports = helpers.extend({
 
 /**
  * @interface IEvent
- * @prop {String} type - The event type name, possible values are:
+ * @prop {String} type - The events type name, possible values are:
  * 'contextmenu', 'mouseenter', 'mousedown', 'mousemove', 'mouseup', 'mouseout',
  * 'click', 'dblclick', 'keydown', 'keypress', 'keyup' and 'resize'
- * @prop {*} native - The original native event (null for emulated events, e.g. 'resize')
+ * @prop {*} native - The original native events (null for emulated events, e.g. 'resize')
  * @prop {Number} x - The mouse x position, relative to the canvas (null for incompatible events)
  * @prop {Number} y - The mouse y position, relative to the canvas (null for incompatible events)
  */
@@ -12138,9 +12138,9 @@ var Legend = Element.extend({
 	},
 
 	/**
-	 * Handle an event
+	 * Handle an events
 	 * @private
-	 * @param {IEvent} event - The event to handle
+	 * @param {IEvent} events - The events to handle
 	 * @return {Boolean} true if a change occured
 	 */
 	handleEvent: function(e) {
@@ -12161,7 +12161,7 @@ var Legend = Element.extend({
 			return;
 		}
 
-		// Chart event already has relative position in it
+		// Chart events already has relative position in it
 		var x = e.x;
 		var y = e.y;
 
@@ -15250,12 +15250,12 @@ var WOW;
 
 
   /**
-   * Disable mousedown event for 500ms during and after touch
+   * Disable mousedown events for 500ms during and after touch
    */
   var TouchHandler = {
 
     /* uses an integer rather than bool so there's no issues with
-     * needing to clear timeouts if another touch event occurred
+     * needing to clear timeouts if another touch events occurred
      * within the 500ms. Cannot mouseup between touchstart and
      * touchend, nor in the 500ms after touchend. */
     touches: 0,
@@ -15320,7 +15320,7 @@ var WOW;
   function showEffect(e) {
 
     // Disable effect if element has "disabled" property on it
-    // In some cases, the event is not triggered by the current element
+    // In some cases, the events is not triggered by the current element
     // if (e.target.getAttribute('disabled') !== null) {
     //     return;
     // }

@@ -315,12 +315,12 @@
 
 
   /**
-   * Disable mousedown event for 500ms during and after touch
+   * Disable mousedown events for 500ms during and after touch
    */
   var TouchHandler = {
 
     /* uses an integer rather than bool so there's no issues with
-     * needing to clear timeouts if another touch event occurred
+     * needing to clear timeouts if another touch events occurred
      * within the 500ms. Cannot mouseup between touchstart and
      * touchend, nor in the 500ms after touchend. */
     touches: 0,
@@ -385,7 +385,7 @@
   function showEffect(e) {
 
     // Disable effect if element has "disabled" property on it
-    // In some cases, the event is not triggered by the current element
+    // In some cases, the events is not triggered by the current element
     // if (e.target.getAttribute('disabled') !== null) {
     //     return;
     // }

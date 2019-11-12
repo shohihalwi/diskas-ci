@@ -95,9 +95,9 @@ class CI_Javascript {
 	/**
 	 * Blur
 	 *
-	 * Outputs a javascript library blur event
+	 * Outputs a javascript library blur events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -111,9 +111,9 @@ class CI_Javascript {
 	/**
 	 * Change
 	 *
-	 * Outputs a javascript library change event
+	 * Outputs a javascript library change events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -127,9 +127,9 @@ class CI_Javascript {
 	/**
 	 * Click
 	 *
-	 * Outputs a javascript library click event
+	 * Outputs a javascript library click events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @param	bool	whether or not to return false
 	 * @return	string
@@ -144,9 +144,9 @@ class CI_Javascript {
 	/**
 	 * Double Click
 	 *
-	 * Outputs a javascript library dblclick event
+	 * Outputs a javascript library dblclick events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -160,9 +160,9 @@ class CI_Javascript {
 	/**
 	 * Error
 	 *
-	 * Outputs a javascript library error event
+	 * Outputs a javascript library error events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -176,9 +176,9 @@ class CI_Javascript {
 	/**
 	 * Focus
 	 *
-	 * Outputs a javascript library focus event
+	 * Outputs a javascript library focus events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -192,7 +192,7 @@ class CI_Javascript {
 	/**
 	 * Hover
 	 *
-	 * Outputs a javascript library hover event
+	 * Outputs a javascript library hover events
 	 *
 	 * @param	string	- element
 	 * @param	string	- Javascript code for mouse over
@@ -209,9 +209,9 @@ class CI_Javascript {
 	/**
 	 * Keydown
 	 *
-	 * Outputs a javascript library keydown event
+	 * Outputs a javascript library keydown events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -225,9 +225,9 @@ class CI_Javascript {
 	/**
 	 * Keyup
 	 *
-	 * Outputs a javascript library keydown event
+	 * Outputs a javascript library keydown events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -241,9 +241,9 @@ class CI_Javascript {
 	/**
 	 * Load
 	 *
-	 * Outputs a javascript library load event
+	 * Outputs a javascript library load events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -257,9 +257,9 @@ class CI_Javascript {
 	/**
 	 * Mousedown
 	 *
-	 * Outputs a javascript library mousedown event
+	 * Outputs a javascript library mousedown events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -273,9 +273,9 @@ class CI_Javascript {
 	/**
 	 * Mouse Out
 	 *
-	 * Outputs a javascript library mouseout event
+	 * Outputs a javascript library mouseout events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -289,9 +289,9 @@ class CI_Javascript {
 	/**
 	 * Mouse Over
 	 *
-	 * Outputs a javascript library mouseover event
+	 * Outputs a javascript library mouseover events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -305,9 +305,9 @@ class CI_Javascript {
 	/**
 	 * Mouseup
 	 *
-	 * Outputs a javascript library mouseup event
+	 * Outputs a javascript library mouseup events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -336,7 +336,7 @@ class CI_Javascript {
 	/**
 	 * Ready
 	 *
-	 * Outputs a javascript library mouseup event
+	 * Outputs a javascript library mouseup events
 	 *
 	 * @param	string	$js	Code to execute
 	 * @return	string
@@ -351,9 +351,9 @@ class CI_Javascript {
 	/**
 	 * Resize
 	 *
-	 * Outputs a javascript library resize event
+	 * Outputs a javascript library resize events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -367,9 +367,9 @@ class CI_Javascript {
 	/**
 	 * Scroll
 	 *
-	 * Outputs a javascript library scroll event
+	 * Outputs a javascript library scroll events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -383,9 +383,9 @@ class CI_Javascript {
 	/**
 	 * Unload
 	 *
-	 * Outputs a javascript library unload event
+	 * Outputs a javascript library unload events
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	string	The code to execute
 	 * @return	string
 	 */
@@ -401,7 +401,7 @@ class CI_Javascript {
 	/**
 	 * Add Class
 	 *
-	 * Outputs a javascript library addClass event
+	 * Outputs a javascript library addClass events
 	 *
 	 * @param	string	- element
 	 * @param	string	- Class to add
@@ -417,7 +417,7 @@ class CI_Javascript {
 	/**
 	 * Animate
 	 *
-	 * Outputs a javascript library animate event
+	 * Outputs a javascript library animate events
 	 *
 	 * @param	string	$element = 'this'
 	 * @param	array	$params = array()
@@ -435,7 +435,7 @@ class CI_Javascript {
 	/**
 	 * Fade In
 	 *
-	 * Outputs a javascript library hide event
+	 * Outputs a javascript library hide events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -452,7 +452,7 @@ class CI_Javascript {
 	/**
 	 * Fade Out
 	 *
-	 * Outputs a javascript library hide event
+	 * Outputs a javascript library hide events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -468,7 +468,7 @@ class CI_Javascript {
 	/**
 	 * Slide Up
 	 *
-	 * Outputs a javascript library slideUp event
+	 * Outputs a javascript library slideUp events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -486,7 +486,7 @@ class CI_Javascript {
 	/**
 	 * Remove Class
 	 *
-	 * Outputs a javascript library removeClass event
+	 * Outputs a javascript library removeClass events
 	 *
 	 * @param	string	- element
 	 * @param	string	- Class to add
@@ -502,7 +502,7 @@ class CI_Javascript {
 	/**
 	 * Slide Down
 	 *
-	 * Outputs a javascript library slideDown event
+	 * Outputs a javascript library slideDown events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -519,7 +519,7 @@ class CI_Javascript {
 	/**
 	 * Slide Toggle
 	 *
-	 * Outputs a javascript library slideToggle event
+	 * Outputs a javascript library slideToggle events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -554,7 +554,7 @@ class CI_Javascript {
 	/**
 	 * Toggle
 	 *
-	 * Outputs a javascript library toggle event
+	 * Outputs a javascript library toggle events
 	 *
 	 * @param	string	- element
 	 * @return	string
@@ -570,7 +570,7 @@ class CI_Javascript {
 	/**
 	 * Toggle Class
 	 *
-	 * Outputs a javascript library toggle class event
+	 * Outputs a javascript library toggle class events
 	 *
 	 * @param	string	$element = 'this'
 	 * @param	string	$class = ''
@@ -586,7 +586,7 @@ class CI_Javascript {
 	/**
 	 * Show
 	 *
-	 * Outputs a javascript library show event
+	 * Outputs a javascript library show events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
@@ -673,7 +673,7 @@ class CI_Javascript {
 	 *
 	 * Outputs a <script> tag
 	 *
-	 * @param	string	The element to attach the event to
+	 * @param	string	The element to attach the events to
 	 * @param	bool	If a CDATA section should be added
 	 * @return	string
 	 */
@@ -722,7 +722,7 @@ class CI_Javascript {
 	/**
 	 * Update
 	 *
-	 * Outputs a javascript library slideDown event
+	 * Outputs a javascript library slideDown events
 	 *
 	 * @param	string	- element
 	 * @param	string	- One of 'slow', 'normal', 'fast', or time in milliseconds
