@@ -40,8 +40,8 @@
             </div> 
 
 
-            <button type="button" class="btn btn-primary" href="?page=hompage">Simpan Data</button>
-            <a class="btn btn-danger" href="?page=hompage">Kembali</a>
+          <button type="button" class="btn btn-primary" href="<?php echo base_url("authentication/daftar") ?>">Simpan Data</button>
+                    <a class="btn btn-danger" href="<?php echo base_url("rekomendasi") ?>">Kembali</a>
         </form>
     </div>
 </div>

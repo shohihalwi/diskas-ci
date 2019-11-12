@@ -13,21 +13,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="?page=homepage">Home</a>
+                        <a class="nav-link" href="<?= base_url("homepage") ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('semua-event') ?>">Semua Event</a>
+                        <a class="nav-link" href="<?= base_url("event/all_event") ?>">Semua Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('event-rekomendasi') ?>">Rekomendasi</a>
+                        <a class="nav-link" href="<?= base_url("event/rekomendasi") ?>">Rekomendasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('faq') ?>">FAQ</a>
+                        <a class="nav-link" href="<?= base_url("homepage/FAQ") ?>">FAQ</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" data-toggle="modal" data-target="#modalLoginForm"   class="nav-link">Login</a>
+                        <a href="#" data-toggle="modal" data-target="#modalLoginForm" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url('authentication/register') ?>"

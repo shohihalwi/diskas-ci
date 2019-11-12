@@ -10,5 +10,13 @@ class Homepage extends CI_Controller {
 		$this->load->view('homepage'); // conten utama
 		$this->load->view('template/footer');
 	}
+
+	public function FAQ()
+	{
+		$this->load->view('template/meta-header');
+		$this->load->view('template/header');
+		$this->load->view('FAQ'); // conten utama
+		$this->load->view('template/footer');
+	}
 }
 

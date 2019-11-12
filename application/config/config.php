@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // ganti ini dengan URL sesuai localhost lo contoh:
 // http://localhost/diskas-ci
 
-$config['base_url'] = 'http://belajar-ci.test';
+$config['base_url'] = 'http://localhost/diskas-ci/';
 
 /*
 |--------------------------------------------------------------------------

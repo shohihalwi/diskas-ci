@@ -54,10 +54,10 @@ aria-hidden="true">
         </div>
         <div class="modal-footer d-flex justify-content-around">
             <a href="">Lupa Password?</a>
-            <a href="?page=membership-dashboard&membership=yes" class="btn btn-default">Login</a>
+            <a href="<?php echo base_url("membership") ?>" class="btn btn-default">Login</a>
         </div>
         <div class="modal-footer d-flex justify-content-center">
-            Belum punya akun? <a href="?page=register" class="ml-3">Daftar Sekarang</a>
+            Belum punya akun? <a href="<?= base_url("daftar") ?>" class="ml-3">Daftar Sekarang</a>
         </div>
     </div>
 </div>
