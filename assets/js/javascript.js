@@ -39,9 +39,21 @@ $(document).ready(function (e) {
     }
     document.onscroll = scroll;
 
-});
 
-$(document).ready(function () {
+    // CMS
+
+    // data tables
     $('#dt').DataTable();
     $('.dataTables_length').addClass('bs-select');
+
+    // Modal confirm delete
+    $('#confirmationDelete').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var title = button.data('title');
+        var link = button.data('link');
+        var modal = $(this);
+        modal.find('#confirmationTitle').text(title);
+        modal.find('#confirmationLink').attr('href',link);
+    })
+
 });

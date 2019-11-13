@@ -56,7 +56,13 @@
                 <h5 class="py-3 mb-0"><?= isset($title) ? $title : "Untitled" ?></h5>
             </div>
             <div class="col-md-4">
-                <a href="#" class="btn btn-primary float-right">Tambah</a>
+                <?php
+                    if (isset($buttonAdd) and $buttonAdd == true):
+                ?>
+                <a href="<?= current_url() . "/add" ?>" class="btn btn-primary float-right">Tambah</a>
+                <?php
+                    endif;
+                ?>
             </div>
         </div>
     </div>
