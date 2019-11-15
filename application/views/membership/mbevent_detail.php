@@ -70,7 +70,7 @@
       <td>41816110193</td>
       <td><span class="badge badge-info">hadir</span></td>
       <td>
-        <a href="?page=membership-event-detail&membership=yes" class="btn btn-outline-blue btn-sm mr-2 mb-2">Lihat Sertifikat</a>
+        <a href="<?php echo base_url("membership/eventdetail/lihatcertificate") ?>" class="btn btn-outline-blue btn-sm mr-2 mb-2">Lihat Sertifikat</a>
       </td>
     </tr>
     <tr>

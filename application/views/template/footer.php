@@ -53,7 +53,7 @@ aria-hidden="true">
 
         </div>
         <div class="modal-footer d-flex justify-content-around">
-            <a href="">Lupa Password?</a>
+            <a href="<?php echo base_url("Authentication/lupa_password") ?>">Lupa Password?</a>
             <a href="<?php echo base_url("membership") ?>" class="btn btn-default">Login</a>
         </div>
         <div class="modal-footer d-flex justify-content-center">

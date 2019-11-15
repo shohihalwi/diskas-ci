@@ -22,7 +22,7 @@
       <td>Sabtu 12 Jan 2020</td>
       <td><span class="badge badge-info">Active</span></td>
       <td>
-        <a href="?page=membership-event-detail&membership=yes" class="btn btn-outline-blue btn-sm mr-2 mb-2">Detail</a>
+        <a href="<?php echo base_url("membership/eventdetail") ?>" class="btn btn-outline-blue btn-sm mr-2 mb-2">Detail</a>
         <a href="#" class="btn btn-outline-danger btn-sm mb-2" data-toggle="modal" data-target=".bd-example-modal-sm">Hapus</a>
       </td>
     </tr>
