@@ -93,6 +93,4 @@ class Masterdata extends My_Controller {
         }
     }
 
-
-
 }

@@ -27,7 +27,7 @@ date_default_timezone_set("Asia/Jakarta");
 // ganti ini dengan URL sesuai localhost lo contoh:
 // http://localhost/diskas-ci
 
-$config['base_url'] = 'http://diskas-ci.test';
+$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/';
 
 /*
 |--------------------------------------------------------------------------
@@ -140,7 +140,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = "vendor/autoload.php";
 
 /*
 |--------------------------------------------------------------------------
