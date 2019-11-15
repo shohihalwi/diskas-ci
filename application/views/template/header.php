@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark black w-100 navbar-scrollable">
+<nav class="navbar navbar-expand-lg navbar-light white w-100 navbar-scrollable">
     <div class="container">
         <a class="navbar-brand" href="index.php">
 
