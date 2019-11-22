@@ -3,23 +3,22 @@
         <h3 class="h1-responsive g-sans-regular">Rekomendasi Untukmu</h3>
         <p>Pilih event kampus yang mungkin kamu minati</p>
         <div class="carousel owl-carousel owl-theme">
+
+            <?php
+            foreach ($events as $value) {
+                $urutan = 1;
+
+                ?>
             <div class="card m-1">
-
-                <?php
-                foreach ($events as $value) {
-                    $urutan = 1;
-
-                    ?>
                 <!-- Card image -->
                 <div class="view overlay">
                     <div class="embed-responsive embed-responsive-4by3">
                         <img class="card-img-top embed-responsive-item"
-                            src="<?= base_url() ?>assets/images/poto-card/<?php echo $value['cover']; ?>"
-                            alt="Card image cap">
+                            src="assets/images/<?php echo $value['cover']; ?>.jpg" alt="Card image cap">
                     </div>
                     <div class="display-price"><span class="badge badge-success"><i
                                 class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                    <a href="?page=detail">
+                    <a href="<?php echo $value['title']; ?>">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
@@ -50,9 +49,9 @@
                 </div>
             </div>
             <?php
-            $urutan++;
-        }
-        ?>
+                $urutan++;
+            }
+            ?>
         </div>
 
     </div>

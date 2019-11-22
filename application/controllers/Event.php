@@ -9,6 +9,7 @@ class Event extends CI_Controller
 		parent::__construct();
 		//Do your magic here
 		$this->load->model('detaileventmodel');
+		$this->load->model('eventmodel');
 	}
 
 
@@ -22,10 +23,11 @@ class Event extends CI_Controller
 
 	public function rekomendasi()
 	{
+		$data['events'] = $this->eventmodel->get();
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
-		$this->load->view('rekomendasi'); // conten utama
+		$this->load->view('rekomendasi', $data); // conten utama
 		$this->load->view('template/footer');
 	}
 

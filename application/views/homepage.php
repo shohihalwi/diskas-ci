@@ -231,7 +231,7 @@
                 <div class="card-body">
 
                     <!-- Title -->
-                    <h5 class="card-title text-truncate-2"><a href="?page=detail"
+                    <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
                             class="text-reset"><?php echo $value['title']; ?></a></h5>
                     <!-- Text -->
                     <hr>
@@ -288,7 +288,7 @@
                     </div>
                     <div class="display-price"><span class="badge badge-success"><i
                                 class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                    <a href="?page=detail">
+                    <a href="<?= base_url("event/detail/" . $value['id']) ?>">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
@@ -297,7 +297,7 @@
                 <div class="card-body">
 
                     <!-- Title -->
-                    <h5 class="card-title text-truncate-2"><a href="?page=detail"
+                    <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
                             class="text-reset"><?php echo $value['title']; ?></a></h5>
                     <!-- Text -->
                     <hr>

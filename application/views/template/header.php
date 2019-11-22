@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark black w-100 navbar-scrollable">
+<nav class="navbar navbar-expand-lg navbar-light white w-100 navbar-scrollable">
     <div class="container">
         <a class="navbar-brand" href="<?= base_url() ?>">
 
@@ -19,7 +19,7 @@
                         <a class="nav-link" href="<?= base_url("event/all_event") ?>">Semua Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url("rekomendasi") ?>">Rekomendasi</a>
+                        <a class="nav-link" href="<?= base_url("event/rekomendasi") ?>">Rekomendasi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url("homepage/FAQ") ?>">FAQ</a>
