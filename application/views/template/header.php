@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light white w-100 navbar-scrollable">
+<nav class="navbar navbar-expand-lg navbar-dark black w-100 navbar-scrollable">
     <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="<?= base_url() ?>">
 
             <a class="navbar-brand" href="<?= base_url() ?>">
                 <img src="https://works.alfathony.com/tugas-web-enterprise/assets/img/logo-light.svg" alt="">
@@ -19,7 +19,7 @@
                         <a class="nav-link" href="<?= base_url("event/all_event") ?>">Semua Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url("event/rekomendasi") ?>">Rekomendasi</a>
+                        <a class="nav-link" href="<?= base_url("rekomendasi") ?>">Rekomendasi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url("homepage/FAQ") ?>">FAQ</a>
@@ -28,9 +28,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="#" data-toggle="modal" data-target="#modalLoginForm" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url('authentication/register') ?>" class="nav-link">Register</a>
                     </li>
                 </ul>
             </div>
