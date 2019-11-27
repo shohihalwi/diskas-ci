@@ -21,6 +21,11 @@
     <div class="container pt-3 pb-4">
         <form action="#" method="post" novalidate="novalidate">
             <div class="row">
+                <!-- Large background input -->
+                <div class="md-form md-bg form-lg">
+                    <input id="form-bg-lg" class="form-control form-control-lg datepicker" type="text">
+                    <label for="form-bg-lg">Example label</label>
+                </div>
                 <div class="col-lg-4 mb-3">
                     <input type="text" class="form-control form-control-lg search-slt" placeholder="Pencarian">
                 </div>
@@ -126,7 +131,7 @@
                     </div>
                     <div class="display-price"><span class="badge badge-success"><i
                                 class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                    <a href="?page=detail">
+                    <a href="<?= base_url("event/detail/moonzher") ?>">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
@@ -175,7 +180,7 @@
                     peserta dengan mudah</p>
             </div>
             <div class="col-md-2">
-                <a href="?page=buat-event" class="btn btn-primary btn-block">Buat Event</a>
+                <a href="<?php echo base_url("event/buat_event") ?>" class="btn btn-primary btn-block">Buat Event</a>
             </div>
         </div>
     </div>
