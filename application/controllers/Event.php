@@ -1,7 +1,17 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Event extends CI_Controller {
+class Event extends CI_Controller
+{
+
+	public function __construct()
+	{
+		parent::__construct();
+		//Do your magic here
+		$this->load->model('detaileventmodel');
+		$this->load->model('eventmodel');
+	}
+
 
 	public function buat_event()
 	{
@@ -13,9 +23,11 @@ class Event extends CI_Controller {
 
 	public function rekomendasi()
 	{
+		$data['events'] = $this->eventmodel->get();
+
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
-		$this->load->view('rekomendasi'); // conten utama
+		$this->load->view('rekomendasi', $data); // conten utama
 		$this->load->view('template/footer');
 	}
 
@@ -25,13 +37,15 @@ class Event extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('all_event'); // conten utama
 		$this->load->view('template/footer');
-			}
+	}
 
-	public function detail($nama_event)
+	public function detail($id)
 	{
+		$data['detail'] = $this->detaileventmodel->get($id);
+
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
-		$this->load->view('event/detail_event'); // conten utama
+		$this->load->view('event/detail_event', $data); // conten utama
 		$this->load->view('template/footer');
 	}
 
@@ -43,4 +57,3 @@ class Event extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 }
-

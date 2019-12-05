@@ -1,7 +1,6 @@
-
-<nav class="navbar navbar-expand-lg navbar-light white w-100 border-bottom navbar-scrollable">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="<?= base_url() ?>">
+<nav class="navbar navbar-expand-lg navbar-light white w-100 navbar-scrollable">
+    <div class="container">
+        <a class="navbar-brand" href="<?= base_url() ?>">
                 <img src="<?= base_url('assets/images/eventmercubuana-logo.svg') ?>" alt="logo mercubuana" style="height: 38px; margin-right: 8px">
 
                 <span class="g-sans-regular">Mercubuana Events</span>
@@ -28,9 +27,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="#" data-toggle="modal" data-target="#modalLoginForm" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url('authentication/register') ?>" class="nav-link">Register</a>
                     </li>
                 </ul>
             </div>
