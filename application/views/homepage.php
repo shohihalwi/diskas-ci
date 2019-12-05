@@ -46,13 +46,17 @@
                 </div>
                 <div class="col-sm-3 mb-3">
                     <select class="form-control form-control-lg search-slt" id="exampleFormControlSelect2">
-                        <option>fakultas</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
+                        <?php
+
+                        foreach ($categories as $value) {
+                            $urutan = 1;
+                            ?>
+                        <option><?php echo $value['name']; ?></option>
+                        <?php
+                            $urutan++;
+                        }
+
+                        ?>
                     </select>
                 </div>
 
