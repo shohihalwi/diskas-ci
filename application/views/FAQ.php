@@ -5,28 +5,31 @@
     <div class="accordion" id="accordionExample">
 
         <?php
-        $urutan = 1;
-        foreach ($faq as $value) {
+        foreach ($master_faqs as $value) {
+            $urutan = 1;
+
 
             ?>
 
-            <div class="card mb-4">
-                <div class="card-header" id="heading-<?php echo $urutan ?>">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-<?php echo $urutan ?>" aria-expanded="true" aria-controls="collapseOne">
-                            <?php echo $value['pertanyaan_faq'];
+        <div class="card mb-4">
+            <div class="card-header" id="heading-<?php echo $urutan ?>">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                        data-target="#collapse-<?php echo $urutan ?>" aria-expanded="true" aria-controls="collapseOne">
+                        <?php echo $value['question'];
                                 ?>
-                        </button>
-                    </h2>
-                </div>
+                    </button>
+                </h2>
+            </div>
 
-                <div id="collapse-<?php echo $urutan ?>" class="collapse show" aria-labelledby="heading-<?php echo $urutan ?>" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <?php echo $value['jawaban_faq'];
+            <div id="collapse-<?php echo $urutan ?>" class="collapse show"
+                aria-labelledby="heading-<?php echo $urutan ?>" data-parent="#accordionExample">
+                <div class="card-body">
+                    <?php echo $value['answer'];
                             ?>
-                    </div>
                 </div>
             </div>
+        </div>
 
         <?php
             $urutan++;

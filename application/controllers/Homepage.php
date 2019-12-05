@@ -36,7 +36,7 @@ class Homepage extends CI_Controller
 		$data['title'] = "Frequently Ask Questions";
 		$data['deskripsi'] = "Pertanyaan Yang Sering Ditanyakan";
 		//manggil model faq yang method get();
-		$data['faq'] = $this->faqmodel->get();
+		$data['master_faqs'] = $this->faqmodel->get();
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');

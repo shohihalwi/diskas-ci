@@ -7,7 +7,7 @@ class FaqModel extends CI_Model
     //untuk menmpilkan data pada table faq
     public function get()
     {
-        $query = $this->db->get('faq');
+        $query = $this->db->get('master_faqs');
         return $query->result_array();
     }
 }
