@@ -11,8 +11,8 @@
     </div>
 </section>
 
-<script async src="https://www.youtube.com/iframe_api"></script>
-<script async src="<?= base_url() ?>assets/js/video.js"></script>
+<!--<script async src="https://www.youtube.com/iframe_api"></script>-->
+<!--<script async src="--><?//= base_url() ?><!--assets/js/video.js"></script>-->
 
 
 
