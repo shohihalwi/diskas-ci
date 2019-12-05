@@ -7,6 +7,7 @@ class Authentication extends CI_Controller {
 	{
 		
     }
+<<<<<<< HEAD
     
     public function login()
 	{
@@ -41,6 +42,9 @@ class Authentication extends CI_Controller {
             redirect(base_url());
         }
     }
+=======
+   	
+>>>>>>> 88f6ddcafc18c01d2d5fc559e29996079820a5fd
     
     public function register()
 	{
@@ -50,6 +54,7 @@ class Authentication extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+<<<<<<< HEAD
 	private function new_session($array){
         $this->session->set_userdata($array);
     }
@@ -61,3 +66,21 @@ class Authentication extends CI_Controller {
         echo "session destroyed";
     }
 }
+=======
+	public function daftar()
+	{
+		$this->load->view('template/meta-header');
+		$this->load->view('template/header');
+		$this->load->view('daftar'); // conten utama
+		$this->load->view('template/footer');
+	}
+
+	public function lupa_password()
+	{
+		$this->load->view('template/meta-header');
+		$this->load->view('template/header');
+		$this->load->view('lupa_password'); // conten utama
+		$this->load->view('template/footer');
+	}
+}
+>>>>>>> 88f6ddcafc18c01d2d5fc559e29996079820a5fd

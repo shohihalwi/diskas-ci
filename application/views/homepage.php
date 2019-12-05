@@ -1,5 +1,5 @@
 <!-- banner hero -->
-<section id="home-banner-box" class="home-banner loading black">
+<section id="home-banner-box" class="home-banner loading black d-none">
     <div class="container">
         <div class="image video-slide">
             <div class="video-background">
@@ -17,22 +17,27 @@
 
 
 <!-- Search form -->
-<section class="search-sec black">
+<section class="search-sec border">
     <div class="container pt-3 pb-4">
         <form action="#" method="post" novalidate="novalidate">
             <div class="row">
+                <!-- Large background input -->
                 <div class="col-lg-4 mb-3">
                     <input type="text" class="form-control form-control-lg search-slt" placeholder="Pencarian">
                 </div>
                 <div class="col-md-3 mb-3">
                     <select class="form-control form-control-lg search-slt" id="exampleFormControlSelect1">
-                        <option>kategori</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
-                        <option>Example one</option>
+                        <?php
+
+                        foreach ($categories as $value) {
+                            $urutan = 1;
+                            ?>
+                        <option><?php echo $value['name']; ?></option>
+                        <?php
+                            $urutan++;
+                        }
+
+                        ?>
                     </select>
                 </div>
                 <div class="col-sm-3 mb-3">
@@ -46,6 +51,7 @@
                         <option>Example one</option>
                     </select>
                 </div>
+
                 <div class="col-sm-2">
                     <button type="button" class="btn btn-primary btn-block m-0">cari</button>
                 </div>
@@ -113,20 +119,27 @@
 
 <section class="py-5">
     <div class="container my-3">
-        <h3 class="h1-responsive g-sans-regular">Hi, jangan terlewat event Fasilkom</h3>
-        <p>Pilih event rekomendasi yang mungkin kamu minati<span class="float-right"><a href="?page=all-event"
-                    class="text-uppercase">Lihat Semua</a></span></p>
+        <h3 class="h1-responsive g-sans-regular"><?php echo $title ?></h3>
+        <p><?php echo $deskripsi ?><span class="float-right"><a href="?page=all-event" class="text-uppercase">Lihat
+                    Semua</a></span></p>
+        <!-- <?php print_r($events) ?> cuma debug-->
         <div class="carousel owl-carousel owl-theme">
+
+            <?php
+
+            foreach ($events as $value) {
+                $urutan = 1;
+                ?>
             <div class="card m-1">
                 <!-- Card image -->
                 <div class="view overlay">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img class="card-img-top embed-responsive-item" src="assets/images/poto-card/musikologi.jpg"
-                            alt="Card image cap">
+                        <img class="card-img-top embed-responsive-item"
+                            src="assets/images/poto-card/<?php echo $value['cover']; ?>" alt="Card image cap">
                     </div>
                     <div class="display-price"><span class="badge badge-success"><i
                                 class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                    <a href="?page=detail">
+                    <a href="<?= base_url("event/detail/" . $value['id']) ?>">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
@@ -135,9 +148,8 @@
                 <div class="card-body">
 
                     <!-- Title -->
-                    <h5 class="card-title text-truncate-2"><a href="?page=detail" class="text-reset">Musikologi Masa
-                            Kini
-                            membawakan menawan</a></h5>
+                    <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
+                            class="text-reset"><?php echo $value['title']; ?></a></h5>
                     <!-- Text -->
                     <hr>
                     <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
@@ -157,6 +169,12 @@
                     </p>
                 </div>
             </div>
+            <?php
+                $urutan++;
+            }
+
+            ?>
+
         </div>
 
     </div>
@@ -175,30 +193,37 @@
                     peserta dengan mudah</p>
             </div>
             <div class="col-md-2">
-                <a href="?page=buat-event" class="btn btn-primary btn-block">Buat Event</a>
+                <a href="<?php echo base_url("event/buat_event") ?>" class="btn btn-primary btn-block">Buat Event</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Event Terbaru -->
+<!-- Event Terbaru Santai sejenak, lengkapi sertifikatmu dengan pilih event yang kamu suka-->
 
 <section class="py-5">
     <div class="container">
-        <h3 class="h1-responsive g-sans-regular">Event Terbaru</h3>
-        <p>Santai sejenak, lengkapi sertifikatmu dengan pilih event yang kamu suka<span class="float-right"><a href="#"
-                    class="text-uppercase">Lihat Semua</a></span></p>
+        <h3 class="h1-responsive g-sans-regular"><?php echo $title ?></h3>
+        <p><?php echo $deskripsi ?><span class="float-right"><a href="#" class="text-uppercase">Lihat Semua</a></span>
+        </p>
         <div class="carousel owl-carousel owl-theme">
+
+            <?php
+
+            foreach ($new as $value) {
+                $urutan = 1;
+                ?>
+
             <div class="card m-1">
                 <!-- Card image -->
                 <div class="view overlay">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img class="card-img-top embed-responsive-item" src="assets/images/cravier.jpg"
-                            alt="Card image cap">
+                        <img class="card-img-top embed-responsive-item"
+                            src="assets/images/<?php echo $value['cover']; ?>.jpg" alt="Card image cap">
                     </div>
                     <div class="display-price"><span class="badge badge-success"><i
                                 class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                    <a href="?page=detail">
+                    <a href="<?php echo $value['title']; ?>">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
@@ -207,9 +232,8 @@
                 <div class="card-body">
 
                     <!-- Title -->
-                    <h5 class="card-title text-truncate-2"><a href="?page=detail" class="text-reset">Musikologi Masa
-                            Kini
-                            membawakan menawan</a></h5>
+                    <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
+                            class="text-reset"><?php echo $value['title']; ?></a></h5>
                     <!-- Text -->
                     <hr>
                     <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
@@ -229,29 +253,43 @@
                     </p>
                 </div>
             </div>
+
+            <?php
+                $urutan++;
+            }
+
+            ?>
+
         </div>
     </div>
 </section>
 
 
-<!-- Banyak Peminat -->
+<!-- Banyak Peminat Jangan sampai kalah berebutan tiket dengan mahasiswa lain-->
 
 <section class="py-5">
     <div class="container">
-        <h3 class="h1-responsive g-sans-regular">Banyak Peminat</h3>
-        <p>Jangan sampai kalah berebutan tiket dengan mahasiswa lain<span class="float-right"><a href="#"
-                    class="text-uppercase">Lihat Semua</a></span></p>
+        <h3 class="h1-responsive g-sans-regular"><?php echo $title ?></h3>
+        <p><?php echo $deskripsi ?><span class="float-right"><a href="#" class="text-uppercase">Lihat Semua</a></span>
+        </p>
         <div class="carousel owl-carousel owl-theme">
+
+            <?php
+
+            foreach ($near as $value) {
+                $urutan = 1;
+                ?>
+
             <div class="card m-1">
                 <!-- Card image -->
                 <div class="view overlay">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img class="card-img-top embed-responsive-item" src="assets/images/indonesia-colorrun.jpg"
-                            alt="Card image cap">
+                        <img class="card-img-top embed-responsive-item"
+                            src="assets/images/<?php echo $value['cover']; ?>.jpg" alt="Card image cap">
                     </div>
-                    <div class="display-price"><span class="badge badge-light"><i
-                                class="material-icons md-18">confirmation_number</i> HABIS</span></div>
-                    <a href="?page=detail">
+                    <div class="display-price"><span class="badge badge-success"><i
+                                class="material-icons md-18">confirmation_number</i> FREE</span></div>
+                    <a href="<?= base_url("event/detail/" . $value['id']) ?>">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
@@ -260,9 +298,8 @@
                 <div class="card-body">
 
                     <!-- Title -->
-                    <h5 class="card-title text-truncate-2"><a href="?page=indonesia-colorrun"
-                            class="text-reset">Musikologi Masa Kini
-                            membawakan menawan</a></h5>
+                    <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
+                            class="text-reset"><?php echo $value['title']; ?></a></h5>
                     <!-- Text -->
                     <hr>
                     <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
@@ -282,6 +319,13 @@
                     </p>
                 </div>
             </div>
+
+            <?php
+                $urutan++;
+            }
+
+            ?>
+
         </div>
     </div>
 </section>
