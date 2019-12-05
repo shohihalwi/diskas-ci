@@ -28,7 +28,7 @@
                             <!-- Text -->
                             <hr>
                             <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
-                                <?php echo $value['event_date']; ?>
+                                <?php echo ConvertDateToString($value['event_date'], 1, 1); ?>
                             </p>
                             <p class="card-text text-truncate"><i class="material-icons md-green md-18 mr-1">map</i> <?php echo $value['place']; ?>
                             </p>
