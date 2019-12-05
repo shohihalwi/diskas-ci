@@ -1,5 +1,5 @@
 <!-- banner hero -->
-<section id="home-banner-box" class="home-banner loading black">
+<section id="home-banner-box" class="home-banner loading black d-none">
     <div class="container">
         <div class="image video-slide">
             <div class="video-background">
@@ -11,21 +11,17 @@
     </div>
 </section>
 
-<script async src="https://www.youtube.com/iframe_api"></script>
-<script async src="<?= base_url() ?>assets/js/video.js"></script>
+<!--<script async src="https://www.youtube.com/iframe_api"></script>-->
+<!--<script async src="--><?//= base_url() ?><!--assets/js/video.js"></script>-->
 
 
 
 <!-- Search form -->
-<section class="search-sec black">
+<section class="search-sec border">
     <div class="container pt-3 pb-4">
         <form action="#" method="post" novalidate="novalidate">
             <div class="row">
                 <!-- Large background input -->
-                <div class="md-form md-bg form-lg">
-                    <input id="form-bg-lg" class="form-control form-control-lg datepicker" type="text">
-                    <label for="form-bg-lg">Example label</label>
-                </div>
                 <div class="col-lg-4 mb-3">
                     <input type="text" class="form-control form-control-lg search-slt" placeholder="Pencarian">
                 </div>

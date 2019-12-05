@@ -8,7 +8,7 @@ class EventModel extends CI_Model
     public function get()
 
     {
-        $query = $this->db->query('select * from events order by faculty_id desc');
+        $query = $this->db->query('select * from events inner join categories on events.category_id = categories.id order by event_date desc');
         return $query->result_array();
     }
 
