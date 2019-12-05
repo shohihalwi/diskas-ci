@@ -33,9 +33,11 @@ class Event extends CI_Controller
 
 	public function all_event()
 	{
+		$data['events'] = $this->eventmodel->get();
+
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
-		$this->load->view('all_event'); // conten utama
+		$this->load->view('all_event', $data); // conten utama
 		$this->load->view('template/footer');
 	}
 
