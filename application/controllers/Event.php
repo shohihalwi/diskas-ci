@@ -43,7 +43,10 @@ class Event extends CI_Controller
 
 	public function detail($id)
 	{
-		$data['detail'] = $this->detaileventmodel->get($id);
+		$data['detail'] = $this->eventmodel->detail($id);
+		$data['tickets'] = $this->eventmodel->getEventTicket($id);
+
+		print_r($data['tickets']);
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');

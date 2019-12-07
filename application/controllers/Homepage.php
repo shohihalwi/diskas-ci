@@ -17,8 +17,8 @@ class Homepage extends CI_Controller
 
 	public function index()
 	{
-		$data['title'] = "HI, Jangan terlewat event fasilkom";
-		$data['deskripsi'] = "Pilih event rekomendasi yang mungkin kamu minati";
+		$data['title'] = "Upcoming events";
+		$data['deskripsi'] = "Don't miss it, join the upcoming event";
 		//manggil model faq yang method get();
 		$data['events'] = $this->eventmodel->get();
 		$data['new'] = $this->eventmodel->new();

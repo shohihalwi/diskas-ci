@@ -8,5 +8,8 @@ $route['default_controller'] = 'homepage';
 $route['membership/tiket-saya'] = 'Membership/tiketsaya';
 $route['membership/navbar_mb'] = 'Membership/membership';
 
+$route['event/all-events'] = 'Event/all_event';
+$route['event/(:num)/(:any)'] = 'Event/detail/$1/$2';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

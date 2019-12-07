@@ -14,7 +14,7 @@ class EventModel extends CI_Model
 
     public function new()
     {
-        $query = $this->db->query('select * from events order by created_at desc');
+        $query = $this->db->query('select * from events inner join categories on events.category_id = categories.id order by event_date desc');
         return $query->result_array();
     }
     public function near()
@@ -23,11 +23,22 @@ class EventModel extends CI_Model
         $query = $this->db->query('select * from events order by event_date desc');
         return $query->result_array();
     }
-    public function detailevent()
 
+    public function detail($id)
     {
-        $query = $this->db->get('events');
+        $this->db->select('categories.name as category_name, events.*');
+        $this->db->from('events');
+        $this->db->join('categories', 'categories.id = events.category_id');
+        $this->db->where('events.id', $id);
+        $query = $this->db->get();
         return $query->row_array();
+    }
+
+    public function getEventTicket($event_id){
+        $this->db->from('event_tickets');
+        $this->db->where('event_id', $event_id);
+        $query = $this->db->get();
+        return $query->result_array();
     }
 }
 
