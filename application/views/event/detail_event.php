@@ -1,13 +1,12 @@
 <div class="container">
     <div class="card mb-5">
         <div class="row">
-            <aside class="col-sm-5">
-                <article class="gallery-wrap">
-                    <div class="img-big-wrap">
-                        <div> <a href="#"><img src="<?php echo linkToApp($detail['cover']) ?>" class="img-fluid"></a></div>
-                    </div> <!-- slider-product.// -->
-                </article> <!-- gallery-wrap .end// -->
-            </aside>
+            <div class="col-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <img class="card-img-top embed-responsive-item"
+                         src="<?php echo linkToApp($detail['cover']) ?>" alt="<?php echo $detail['title']; ?>">
+                </div>
+            </div>
             <aside class="col-sm-7">
                 <article class="card-body p-4">
                     <h3 class="title mb-3 g-sans-regular"><?php echo $detail['title']; ?></h3>
@@ -16,33 +15,31 @@
                         <span class="badge badge-primary shadow-none"><?php echo $detail['category_name']; ?></span>
                     </div>
 
+                    <div class="row">
+                        <dl class="param param-feature col-6">
+                            <dt>Date</dt>
+                            <dd> <?php echo ConvertDateToString($detail['event_date'], 1, 1); ?></dd>
+                        </dl> <!-- item-property-hor .// -->
+                        <dl class="param param-feature col-6">
+                            <dt>Time</dt>
+                            <dd> <?php echo $detail['starting_time']; ?>-<?php echo $detail['ending_time']; ?></dd>
+                        </dl> <!-- item-property-hor .// -->
+                        <dl class="param param-feature col-6">
+                            <dt><i class="fas fa-thumbtack"></i>Venue</dt>
+                            <dd>Gedung Tower Lantai 7, Universitas Mercu Buana</dd>
+                        </dl> <!-- item-property-hor .// -->
+                        <dl class="param param-feature col-6">
+                            <dt><i class="fas fa-thumbtack"></i>Organizer</dt>
+                            <dd>Fakultas Ilmu Komputer</dd>
+                        </dl> <!-- item-property-hor .// -->
+                    </div>
+
                     <dl class="item-property">
                         <dt>Description</dt>
                         <dd>
                             <p><?php echo $detail['description']; ?></p>
                         </dd>
                     </dl>
-
-                    <div class="row">
-                        <dl class="param param-feature col-6">
-                            <dt>Tanggal</dt>
-                            <dd> <?php echo ConvertDateToString($detail['event_date'], 1, 1); ?></dd>
-                        </dl> <!-- item-property-hor .// -->
-                        <dl class="param param-feature col-6">
-                            <dt>Waktu</dt>
-                            <dd> <?php echo $detail['starting_time']; ?>-<?php echo $detail['ending_time']; ?></dd>
-                        </dl> <!-- item-property-hor .// -->
-                        <dl class="param param-feature col-6">
-                            <dt><i class="fas fa-thumbtack"></i>Tempat</dt>
-                            <dd>Gedung Tower Lantai 7, Universitas Mercu Buana</dd>
-                        </dl> <!-- item-property-hor .// -->
-                        <dl class="param param-feature col-6">
-                            <dt><i class="fas fa-thumbtack"></i>Penyelenggara</dt>
-                            <dd>Fakultas Ilmu Komputer</dd>
-                        </dl> <!-- item-property-hor .// -->
-                    </div>
-
-
 
                     <hr>
                     <?php

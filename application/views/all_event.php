@@ -1,7 +1,7 @@
 <section class="py-5">
     <div class="container my-3">
-        <h3 class="h1-responsive g-sans-regular">Rekomendasi Untukmu</h3>
-        <p>Pilih event kampus yang mungkin kamu minati</p>
+        <h3 class="h1-responsive g-sans-regular">All events Mercu Buana</h3>
+        <p>A list of event information that is on your campus</p>
         <div class="row">
             <?php foreach ($events as $value) { ?>
                 <div class="col-md-3">

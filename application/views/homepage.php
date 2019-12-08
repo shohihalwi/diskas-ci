@@ -14,7 +14,7 @@
 <!--<script async src="https://www.youtube.com/iframe_api"></script>-->
 <!--<script async src="--><?//= base_url() ?><!--assets/js/video.js"></script>-->
 
-<section class="comingsoon h-50 d-flex flex-row" style="padding-top: 100px">
+<section class="d-flex flex-row" style="padding-top: 100px">
     <div class="container align-self-center">
         <h1 class="g-sans-regular display-4">Looking for something for increasing <br> your knowledge like Certification?
 
@@ -25,26 +25,21 @@
             <span class="typing-item d-block"><span class="typing-item_inner">Exhibition </span></span>
         </h1>
 
-        <p class="heading h3-responsive">Search and get events that interest you easily</p>
-    </div>
-</section>
-
-<!-- Search form -->
-<section class="search-sec border bg-light">
-    <div class="container pt-5 pb-4">
+        <p class="heading h3-responsive mt-5">Search and get events that interest you easily</p>
         <form action="#" method="post" novalidate="novalidate">
             <div class="row">
                 <!-- Large background input -->
-                <div class="col-md-10 mb-3">
+                <div class="col-md-6 mb-3">
                     <input type="text" class="form-control form-control-lg search-slt" placeholder="e.g Seminar Sinaptika">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 p-0">
                     <button type="submit" class="btn btn-primary btn-block m-0">Search</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
+
 
 <!-- card Cetagory -->
 
@@ -105,9 +100,9 @@
 <section class="py-5">
     <div class="container my-3">
         <h3 class="h1-responsive g-sans-regular"><?php echo $title ?></h3>
-        <p><?php echo $deskripsi ?><span class="float-right"><a href="?page=all-event" class="text-uppercase">Lihat
+        <p><?php echo $deskripsi ?><span class="float-right">
+                <a href="<?= base_url('event/all-events')?>" class="text-uppercase">Lihat
                     Semua</a></span></p>
-        <!-- <?php print_r($events) ?> cuma debug-->
         <div class="carousel owl-carousel owl-theme">
 
             <?php
@@ -133,7 +128,8 @@
                     <div class="card-body">
 
                         <!-- Title -->
-                        <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
+                        <h5 class="card-title text-truncate-2">
+                            <a href="<?php echo base_url('event/' . $value['id'] .'/' .  slug($value['title'])); ?>"
                                                                   class="text-reset"><?php echo $value['title']; ?></a></h5>
                         <!-- Text -->
                         <hr>
@@ -163,15 +159,19 @@
 
 
 <!-- Call to panitia -->
-<section class="py-5 mb-4 bg-light">
+<section class="py-5 mb-4">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h1 class="h1-responsive g-sans-regular">Post events and manage without fuss</h1>
-                <p class="font-weight-light">You can post your event or your organization and manage participants easily</p>
-            </div>
-            <div class="col-md-4">
-                <a href="//localhost:3002/event/create" class="nav-link border px-3 rounded font-weight-bold mr-2 blue-gradient text-white waves-effect waves-light float-right"><i class="fas fa-plus mr-2"></i>Create Your Event</a>
+        <div class="card blue-gradient">
+            <div class="card-body white-text">
+                <div class="row p-3">
+                    <div class="col-md-8">
+                        <h4 class="g-sans-regular">Post events and manage without fuss</h4>
+                        <p class="mb-0">You can post your event or your organization and manage participants easily</p>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column">
+                        <a href="<?php echo linkToApp('event/create') ?>" class="bg-white text-dark btn btn-fb btn-login waves-effect waves-light">Try for Free</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -238,7 +238,7 @@
 
 
 <!-- Section: Features v.1 -->
-<section class="text-center py-5 bg-light">
+<section class="text-center py-5 bg-light d-none">
     <div class="container">
         <!-- Section heading -->
         <h2 class="h1-responsive g-sans-regular my-5">Bagaimana Mercu Event Bekerja?</h2>

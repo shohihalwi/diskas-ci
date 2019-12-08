@@ -6,21 +6,36 @@ class EventModel extends CI_Model
 {
     //untuk menmpilkan data pada table eventberdasarkan rekomendasi
     public function get()
-
     {
-        $query = $this->db->query('select * from events inner join categories on events.category_id = categories.id order by event_date desc');
+        $this->db->select('categories.name, events.*');
+        $this->db->from('events');
+        $this->db->join('categories', 'categories.id = events.category_id');
+        $this->db->where('events.status_id', 1); //harus event yang di approve
+        $this->db->where('events.is_active', 1); //harus event yang di publish
+        $this->db->order_by('event_date', 'RANDOM');
+        $query = $this->db->get();
         return $query->result_array();
     }
 
     public function new()
     {
-        $query = $this->db->query('select * from events inner join categories on events.category_id = categories.id order by event_date desc');
+        $this->db->select('categories.name, events.*');
+        $this->db->from('events');
+        $this->db->join('categories', 'categories.id = events.category_id');
+        $this->db->where('events.status_id', 1); //harus event yang di approve
+        $this->db->where('events.is_active', 1); //harus event yang di publish
+        $this->db->order_by('created_at', 'ASC');
+        $query = $this->db->get();
         return $query->result_array();
     }
-    public function near()
 
+    public function near()
     {
-        $query = $this->db->query('select * from events order by event_date desc');
+        $this->db->select('categories.name, events.*');
+        $this->db->from('events');
+        $this->db->join('categories', 'categories.id = events.category_id');
+        $this->db->order_by('event_date', 'ASC');
+        $query = $this->db->get();
         return $query->result_array();
     }
 
@@ -30,6 +45,8 @@ class EventModel extends CI_Model
         $this->db->from('events');
         $this->db->join('categories', 'categories.id = events.category_id');
         $this->db->where('events.id', $id);
+        $this->db->where('events.status_id', 1); //harus event yang di approve
+        $this->db->where('events.is_active', 1); //harus event yang di publish
         $query = $this->db->get();
         return $query->row_array();
     }

@@ -6,7 +6,7 @@ if (! function_exists('linkToApp')){
         if (ENVIRONMENT == 'production'){
             return "https://app.eventmercubuana.com/" . $uri;
         }else{
-            return "https://app.eventmercubuana.test/" . $uri;
+            return "https://localhost:3002/" . $uri;
         }
     }
 }

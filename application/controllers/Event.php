@@ -46,12 +46,15 @@ class Event extends CI_Controller
 		$data['detail'] = $this->eventmodel->detail($id);
 		$data['tickets'] = $this->eventmodel->getEventTicket($id);
 
-		print_r($data['tickets']);
-
-		$this->load->view('template/meta-header');
-		$this->load->view('template/header');
-		$this->load->view('event/detail_event', $data); // conten utama
-		$this->load->view('template/footer');
+		// check event harus aktif dan verified
+		if ($data['detail']['is_active'] == 1 && $data['detail']['status_id'] == 1){
+            $this->load->view('template/meta-header');
+            $this->load->view('template/header');
+            $this->load->view('event/detail_event', $data); // conten utama
+            $this->load->view('template/footer');
+        }else{
+            redirect('404');
+        }
 	}
 
 	public function westlife()
