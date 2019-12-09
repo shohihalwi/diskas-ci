@@ -119,8 +119,8 @@
                 <!-- Card image -->
                 <div class="view overlay">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img class="card-img-top embed-responsive-item" src="<?php echo linkToApp($value['cover']) ; ?>"
-                            alt="<?php echo $value['title']; ?>">
+                        <img class="card-img-top embed-responsive-item"
+                            src="<?php echo linkToAppAsset($value['cover']) ; ?>" alt="<?php echo $value['title']; ?>">
                     </div>
                     <div class="display-price"><span class="badge badge-success"><i
                                 class="material-icons md-18">confirmation_number</i> FREE</span></div>
@@ -175,7 +175,7 @@
                         <p class="mb-0">You can post your event or your organization and manage participants easily</p>
                     </div>
                     <div class="col-md-4 d-flex flex-column">
-                        <a href="<?php echo linkToApp('event/create') ?>"
+                        <a href="<?php echo linkToAppAsset('event/create') ?>"
                             class="bg-white text-dark btn btn-fb btn-login waves-effect waves-light">Try for Free</a>
                     </div>
                 </div>
@@ -204,8 +204,8 @@
                 <!-- Card image -->
                 <div class="view overlay">
                     <div class="embed-responsive embed-responsive-4by3">
-                        <img class="card-img-top embed-responsive-item" src="<?php echo linkToApp($value['cover']); ?>"
-                            alt="<?php echo $value['title']; ?>">
+                        <img class="card-img-top embed-responsive-item"
+                            src="<?php echo linkToAppAsset($value['cover']); ?>" alt="<?php echo $value['title']; ?>">
                     </div>
                     <div class="display-price"><span class="badge badge-success"><i
                                 class="material-icons md-18">confirmation_number</i> FREE</span></div>

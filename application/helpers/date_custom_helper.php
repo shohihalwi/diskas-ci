@@ -11,6 +11,17 @@ if (! function_exists('linkToApp')){
     }
 }
 
+if (! function_exists('linkToAppAsset')){
+    function linkToApp($uri)
+    {
+        if (ENVIRONMENT == 'production'){
+            return "https://app.eventmercubuana.com/storage/" . $uri;
+        }else{
+            return "https://localhost:3002/" . $uri;
+        }
+    }
+}
+
 if (! function_exists('slug')){
     function slug($text)
     {
