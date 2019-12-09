@@ -11,7 +11,7 @@ class Homepage extends CI_Controller
 		//Do your magic here
 		$this->load->model('FaqModel');
 		$this->load->model('EventModel');
-		$this->load->model('kategoriModel');
+		$this->load->model('KategoriModel');
 	}
 
 
