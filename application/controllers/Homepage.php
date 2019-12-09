@@ -9,7 +9,7 @@ class Homepage extends CI_Controller
 	{
 		parent::__construct();
 		//Do your magic here
-		$this->load->model('faqmodel');
+		$this->load->model('FaqModel');
 		$this->load->model('eventmodel');
 		$this->load->model('kategorimodel');
 	}
