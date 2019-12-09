@@ -23,7 +23,7 @@ class Homepage extends CI_Controller
 		$data['events'] = $this->EventModel->get();
 		$data['new'] = $this->EventModel->new();
 		$data['near'] = $this->EventModel->near();
-		$data['categories'] = $this->kategoriModel->cat();
+		$data['categories'] = $this->KategoriModel->cat();
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');

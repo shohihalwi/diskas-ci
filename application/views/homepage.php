@@ -12,11 +12,14 @@
 </section>
 
 <!--<script async src="https://www.youtube.com/iframe_api"></script>-->
-<!--<script async src="--><?//= base_url() ?><!--assets/js/video.js"></script>-->
+<!--<script async src="-->
+<?//= base_url() ?>
+<!--assets/js/video.js"></script>-->
 
 <section class="d-flex flex-row" style="padding-top: 100px">
     <div class="container align-self-center">
-        <h1 class="g-sans-regular display-4">Looking for something for increasing <br> your knowledge like Certification?
+        <h1 class="g-sans-regular display-4">Looking for something for increasing <br> your knowledge like
+            Certification?
 
         </h1>
         <h1 class="typing g-sans-regular d-none">
@@ -30,7 +33,8 @@
             <div class="row">
                 <!-- Large background input -->
                 <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control form-control-lg search-slt" placeholder="e.g Seminar Sinaptika">
+                    <input type="text" class="form-control form-control-lg search-slt"
+                        placeholder="e.g Seminar Sinaptika">
                 </div>
                 <div class="col-md-2 p-0">
                     <button type="submit" class="btn btn-primary btn-block m-0">Search</button>
@@ -46,7 +50,8 @@
 <section class="py-5 d-none">
     <div class="container text-center">
         <h1 class="h1-responsive g-sans-regular my-3">Semua event Universitas Mercu Buana</h1>
-        <p class="lead">It's now easier to find events that are suitable for you to complete your knowledge, network and certificates</p>
+        <p class="lead">It's now easier to find events that are suitable for you to complete your knowledge, network and
+            certificates</p>
     </div>
 
     <div class="container">
@@ -110,40 +115,41 @@
             foreach ($events as $value) {
                 $urutan = 1;
                 ?>
-                <div class="card m-1">
-                    <!-- Card image -->
-                    <div class="view overlay">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <img class="card-img-top embed-responsive-item"
-                                 src="http://app.eventmercubuana.test/<?php echo $value['cover']; ?>" alt="<?php echo $value['title']; ?>">
-                        </div>
-                        <div class="display-price"><span class="badge badge-success"><i
-                                        class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                        <a href="<?php echo base_url('event/' . $value['id'] .'/' .  slug($value['title'])); ?>">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
+            <div class="card m-1">
+                <!-- Card image -->
+                <div class="view overlay">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <img class="card-img-top embed-responsive-item" src="<?php echo linkToApp($value['cover']) ; ?>"
+                            alt="<?php echo $value['title']; ?>">
                     </div>
-
-                    <!-- Card content -->
-                    <div class="card-body">
-
-                        <!-- Title -->
-                        <h5 class="card-title text-truncate-2">
-                            <a href="<?php echo base_url('event/' . $value['id'] .'/' .  slug($value['title'])); ?>"
-                                                                  class="text-reset"><?php echo $value['title']; ?></a></h5>
-                        <!-- Text -->
-                        <hr>
-                        <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
-                            <?php echo ConvertDateToString($value['event_date'], 1, 1); ?>
-                        </p>
-                        <p class="card-text text-truncate"><i class="material-icons md-green md-18 mr-1">map</i> <?php echo $value['place']; ?>
-                        </p>
-
-                        <p class="card-text text-truncate">
-                            <span class="badge badge-pill badge-light shadow-none p-2"><?php echo $value['name']; ?></span>
-                        </p>
-                    </div>
+                    <div class="display-price"><span class="badge badge-success"><i
+                                class="material-icons md-18">confirmation_number</i> FREE</span></div>
+                    <a href="<?php echo base_url('event/' . $value['id'] .'/' .  slug($value['title'])); ?>">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
                 </div>
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                    <!-- Title -->
+                    <h5 class="card-title text-truncate-2">
+                        <a href="<?php echo base_url('event/' . $value['id'] .'/' .  slug($value['title'])); ?>"
+                            class="text-reset"><?php echo $value['title']; ?></a></h5>
+                    <!-- Text -->
+                    <hr>
+                    <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
+                        <?php echo ConvertDateToString($value['event_date'], 1, 1); ?>
+                    </p>
+                    <p class="card-text text-truncate"><i class="material-icons md-green md-18 mr-1">map</i>
+                        <?php echo $value['place']; ?>
+                    </p>
+
+                    <p class="card-text text-truncate">
+                        <span class="badge badge-pill badge-light shadow-none p-2"><?php echo $value['name']; ?></span>
+                    </p>
+                </div>
+            </div>
             <?php
                 $urutan++;
             }
@@ -169,7 +175,8 @@
                         <p class="mb-0">You can post your event or your organization and manage participants easily</p>
                     </div>
                     <div class="col-md-4 d-flex flex-column">
-                        <a href="<?php echo linkToApp('event/create') ?>" class="bg-white text-dark btn btn-fb btn-login waves-effect waves-light">Try for Free</a>
+                        <a href="<?php echo linkToApp('event/create') ?>"
+                            class="bg-white text-dark btn btn-fb btn-login waves-effect waves-light">Try for Free</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +189,8 @@
 <section class="py-5">
     <div class="container">
         <h3 class="h1-responsive g-sans-regular">New one we have</h3>
-        <p>Make sure you are up to date on your campus events<span class="float-right"><a href="#" class="text-uppercase">Lihat Semua</a></span>
+        <p>Make sure you are up to date on your campus events<span class="float-right"><a href="#"
+                    class="text-uppercase">Lihat Semua</a></span>
         </p>
         <div class="carousel owl-carousel owl-theme">
 
@@ -192,39 +200,41 @@
                 $urutan = 1;
                 ?>
 
-                <div class="card m-1">
-                    <!-- Card image -->
-                    <div class="view overlay">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <img class="card-img-top embed-responsive-item"
-                                 src="http://app.eventmercubuana.test/<?php echo $value['cover']; ?>" alt="<?php echo $value['title']; ?>">
-                        </div>
-                        <div class="display-price"><span class="badge badge-success"><i
-                                        class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                        <a href="<?php echo $value['title']; ?>">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
+            <div class="card m-1">
+                <!-- Card image -->
+                <div class="view overlay">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <img class="card-img-top embed-responsive-item"
+                            src="http://app.eventmercubuana.test/<?php echo $value['cover']; ?>"
+                            alt="<?php echo $value['title']; ?>">
                     </div>
-
-                    <!-- Card content -->
-                    <div class="card-body">
-
-                        <!-- Title -->
-                        <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
-                                                                  class="text-reset"><?php echo $value['title']; ?></a></h5>
-                        <!-- Text -->
-                        <hr>
-                        <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
-                            <?php echo ConvertDateToString($value['event_date'], 1, 1); ?>
-                        </p>
-                        <p class="card-text text-truncate"><i class="material-icons md-green md-18 mr-1">map</i> <?php echo $value['place']; ?>
-                        </p>
-
-                        <p class="card-text text-truncate">
-                            <span class="badge badge-pill badge-light shadow-none p-2"><?php echo $value['name']; ?></span>
-                        </p>
-                    </div>
+                    <div class="display-price"><span class="badge badge-success"><i
+                                class="material-icons md-18">confirmation_number</i> FREE</span></div>
+                    <a href="<?php echo $value['title']; ?>">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
                 </div>
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                    <!-- Title -->
+                    <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
+                            class="text-reset"><?php echo $value['title']; ?></a></h5>
+                    <!-- Text -->
+                    <hr>
+                    <p class="card-text text-truncate mb-0"><i class="material-icons md-green md-18 mr-1">schedule</i>
+                        <?php echo ConvertDateToString($value['event_date'], 1, 1); ?>
+                    </p>
+                    <p class="card-text text-truncate"><i class="material-icons md-green md-18 mr-1">map</i>
+                        <?php echo $value['place']; ?>
+                    </p>
+
+                    <p class="card-text text-truncate">
+                        <span class="badge badge-pill badge-light shadow-none p-2"><?php echo $value['name']; ?></span>
+                    </p>
+                </div>
+            </div>
 
             <?php
                 $urutan++;
