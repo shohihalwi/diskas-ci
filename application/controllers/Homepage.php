@@ -10,8 +10,8 @@ class Homepage extends CI_Controller
 		parent::__construct();
 		//Do your magic here
 		$this->load->model('FaqModel');
-		$this->load->model('eventmodel');
-		$this->load->model('kategorimodel');
+		$this->load->model('EventModel');
+		$this->load->model('kategoriModel');
 	}
 
 
@@ -20,10 +20,10 @@ class Homepage extends CI_Controller
 		$data['title'] = "Upcoming events";
 		$data['deskripsi'] = "Don't miss it, join the upcoming event";
 		//manggil model faq yang method get();
-		$data['events'] = $this->eventmodel->get();
-		$data['new'] = $this->eventmodel->new();
-		$data['near'] = $this->eventmodel->near();
-		$data['categories'] = $this->kategorimodel->cat();
+		$data['events'] = $this->EventModel->get();
+		$data['new'] = $this->EventModel->new();
+		$data['near'] = $this->EventModel->near();
+		$data['categories'] = $this->kategoriModel->cat();
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
@@ -36,7 +36,7 @@ class Homepage extends CI_Controller
 		$data['title'] = "Frequently Ask Questions";
 		$data['deskripsi'] = "Pertanyaan Yang Sering Ditanyakan";
 		//manggil model faq yang method get();
-		$data['master_faqs'] = $this->faqmodel->get();
+		$data['master_faqs'] = $this->FaqModel->get();
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');

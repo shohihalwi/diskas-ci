@@ -8,8 +8,8 @@ class Event extends CI_Controller
 	{
 		parent::__construct();
 		//Do your magic here
-		$this->load->model('detaileventmodel');
-		$this->load->model('eventmodel');
+		$this->load->model('DetailEventmodel');
+		$this->load->model('EventModel');
 	}
 
 
