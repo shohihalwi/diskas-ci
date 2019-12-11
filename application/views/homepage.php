@@ -106,7 +106,7 @@
     <div class="container my-3">
         <h3 class="h1-responsive g-sans-regular"><?php echo $title ?></h3>
         <p><?php echo $deskripsi ?><span class="float-right">
-                <a href="<?= base_url('event/all-events')?>" class="text-uppercase">Lihat
+                <a href="<?= base_url('event/all-events')?>" class="text-uppercase d-none d-md-block">Lihat
                     Semua</a></span></p>
         <div class="carousel owl-carousel owl-theme">
 
@@ -190,7 +190,7 @@
     <div class="container">
         <h3 class="h1-responsive g-sans-regular">New one we have</h3>
         <p>Make sure you are up to date on your campus events<span class="float-right"><a href="#"
-                    class="text-uppercase">Lihat Semua</a></span>
+                    class="text-uppercase  d-none d-md-block">Lihat Semua</a></span>
         </p>
         <div class="carousel owl-carousel owl-theme">
 

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Mercu Event</title>
+    <meta name=" theme-color" content="#ffffff">
     <meta name="google-signin-client_id" content="404766723014-556ceqqifjaf150535o42056a1544phk.apps.googleusercontent.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugin/bootstrap/css/bootstrap.min.css">
