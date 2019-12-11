@@ -6,8 +6,6 @@
 
             <?php
             foreach ($events as $value) {
-                $urutan = 1;
-
                 ?>
             <div class="col-md-3">
                 <div class="card m-1">
@@ -20,7 +18,7 @@
                         </div>
                         <div class="display-price"><span class="badge badge-success"><i
                                     class="material-icons md-18">confirmation_number</i> FREE</span></div>
-                        <a href="<?php echo $value['title']; ?>">
+                        <a href="<?php echo base_url('event/' . $value['id'] .'/' .  slug($value['title'])); ?>">
                             <div class="mask rgba-white-slight"></div>
                         </a>
                     </div>
@@ -29,7 +27,8 @@
                     <div class="card-body">
 
                         <!-- Title -->
-                        <h5 class="card-title text-truncate-2"><a href="<?= base_url("event/detail/" . $value['id']) ?>"
+                        <h5 class="card-title text-truncate-2">
+                            <a href="<?php echo base_url('event/' . $value['id'] .'/' .  slug($value['title'])); ?>"
                                 class="text-reset"><?php echo $value['title']; ?></a></h5>
                         <!-- Text -->
                         <hr>
@@ -49,7 +48,6 @@
                 </div>
             </div>
             <?php
-                $urutan++;
             }
             ?>
         </div>

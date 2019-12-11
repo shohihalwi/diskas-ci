@@ -40,7 +40,7 @@ class Event extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
-	public function detail($id)
+	public function detail($id, $slug)
 	{
 		$data['detail'] = $this->EventModel->detail($id);
 		$data['tickets'] = $this->EventModel->getEventTicket($id);
