@@ -56,11 +56,15 @@ class Event extends CI_Controller
         }
 	}
 
-	public function westlife()
-	{
-		$this->load->view('template/meta-header');
-		$this->load->view('template/header');
-		$this->load->view('westlife'); // conten utama
-		$this->load->view('template/footer');
-	}
+    public function search()
+    {
+        $get_keyword = $this->input->get('keyword');
+        $data['events'] = $this->EventModel->search($get_keyword);
+        $data['keyword'] = $get_keyword;
+
+        $this->load->view('template/meta-header');
+        $this->load->view('template/header');
+        $this->load->view('search', $data); // conten utama
+        $this->load->view('template/footer');
+    }
 }

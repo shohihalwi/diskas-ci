@@ -29,6 +29,19 @@ class EventModel extends CI_Model
         return $query->result_array();
     }
 
+    public function search($keyword)
+    {
+        $this->db->select('categories.name, events.*');
+        $this->db->from('events');
+        $this->db->join('categories', 'categories.id = events.category_id');
+        $this->db->where('events.status_id', 1); //harus event yang di approve
+        $this->db->where('events.is_active', 1); //harus event yang di publish
+        $this->db->like('events.title', $keyword, 'both');
+        $this->db->or_like('events.description', $keyword, 'both');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
     public function near()
     {
         $this->db->select('categories.name, events.*');

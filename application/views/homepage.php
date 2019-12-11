@@ -29,14 +29,14 @@
         </h1>
 
         <p class="heading h3-responsive mt-5">Search and get events that interest you easily</p>
-        <form action="#" method="post" novalidate="novalidate">
+        <form action="<?= base_url('search') ?>" method="get" novalidate="novalidate" class="need-validate">
             <div class="row">
                 <!-- Large background input -->
                 <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control form-control-lg search-slt"
+                    <input type="text" name="keyword" class="form-control form-control-lg search-slt required-field"
                         placeholder="e.g Seminar Sinaptika">
                 </div>
-                <div class="col-md-2 p-0">
+                <div class="col-md-2">
                     <button type="submit" class="btn btn-primary btn-block m-0">Search</button>
                 </div>
             </div>

@@ -39,6 +39,17 @@ $(document).ready(function (e) {
     }
     document.onscroll = scroll;
 
+    $('.need-validate').submit(function () {
+        // Get the Login Name value and trim it
+        var name = $.trim($('.required-field').val());
+
+        // Check if empty of not
+        if (name  === '') {
+            $('.required-field').addClass('border-danger');
+            return false;
+        }
+    });
+
 
 });
 

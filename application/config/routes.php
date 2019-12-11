@@ -10,6 +10,7 @@ $route['membership/navbar_mb'] = 'Membership/membership';
 
 $route['event/(:any)/(:any)'] = 'Event/detail/$1/$2';
 $route['event/all-events'] = 'Event/all_event';
+$route['search'] = 'Event/search';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
