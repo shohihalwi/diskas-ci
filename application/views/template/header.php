@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link border px-3 rounded font-weight-bold mr-2 blue-gradient text-white" href="<?php echo linkToApp('event/create') ?>"><i class="fas fa-plus mr-2"></i>Create Your Event</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link border px-3 rounded font-weight-bold mr-2" href="<?php echo linkToApp('') ?>"><i class="fas fa-user mr-2"></i>My Account</a>
+                    </li>
                 </ul>
             </div>
     </div>

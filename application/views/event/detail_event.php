@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="embed-responsive embed-responsive-16by9">
                     <img class="card-img-top embed-responsive-item"
-                         src="<?php echo linkToApp($detail['cover']) ?>" alt="<?php echo $detail['title']; ?>">
+                         src="<?php echo linkToAppAsset($detail['cover']) ?>" alt="<?php echo $detail['title']; ?>">
                 </div>
             </div>
             <aside class="col-sm-12">
