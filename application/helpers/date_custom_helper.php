@@ -12,7 +12,7 @@ if (! function_exists('linkToApp')){
 }
 
 if (! function_exists('linkToAppAsset')){
-    function linkToApp($uri)
+    function linkToAppAsset($uri)
     {
         if (ENVIRONMENT == 'production'){
             return "https://app.eventmercubuana.com/storage/" . $uri;

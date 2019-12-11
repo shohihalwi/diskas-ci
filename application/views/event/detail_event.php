@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card mb-5">
+    <div class="card shadow-none border mb-5">
         <div class="row">
             <div class="col-12">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -7,29 +7,30 @@
                          src="<?php echo linkToApp($detail['cover']) ?>" alt="<?php echo $detail['title']; ?>">
                 </div>
             </div>
-            <aside class="col-sm-7">
+            <aside class="col-sm-12">
                 <article class="card-body p-4">
-                    <h3 class="title mb-3 g-sans-regular"><?php echo $detail['title']; ?></h3>
+                    <h1 class="title mb-3 g-sans-regular"><?php echo $detail['title']; ?></h1>
 
                     <div class="mb-3">
                         <span class="badge badge-primary shadow-none"><?php echo $detail['category_name']; ?></span>
                     </div>
+                    <hr>
 
                     <div class="row">
                         <dl class="param param-feature col-6">
-                            <dt>Date</dt>
+                            <dt><i class="fa fa-calendar mr-2"></i> Date</dt>
                             <dd> <?php echo ConvertDateToString($detail['event_date'], 1, 1); ?></dd>
                         </dl> <!-- item-property-hor .// -->
                         <dl class="param param-feature col-6">
-                            <dt>Time</dt>
+                            <dt><i class="fas fa-clock mr-2"></i>  Time</dt>
                             <dd> <?php echo $detail['starting_time']; ?>-<?php echo $detail['ending_time']; ?></dd>
                         </dl> <!-- item-property-hor .// -->
                         <dl class="param param-feature col-6">
-                            <dt><i class="fas fa-thumbtack"></i>Venue</dt>
+                            <dt><i class="fas fa-thumbtack mr-2"></i>Venue</dt>
                             <dd>Gedung Tower Lantai 7, Universitas Mercu Buana</dd>
                         </dl> <!-- item-property-hor .// -->
                         <dl class="param param-feature col-6">
-                            <dt><i class="fas fa-thumbtack"></i>Organizer</dt>
+                            <dt><i class="fa fa-layer-group mr-2"></i>Organizer</dt>
                             <dd>Fakultas Ilmu Komputer</dd>
                         </dl> <!-- item-property-hor .// -->
                     </div>

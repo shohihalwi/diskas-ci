@@ -23,7 +23,7 @@ class Event extends CI_Controller
 
 	public function rekomendasi()
 	{
-		$data['events'] = $this->eventmodel->get();
+		$data['events'] = $this->EventModel->get();
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
@@ -33,7 +33,7 @@ class Event extends CI_Controller
 
 	public function all_event()
 	{
-		$data['events'] = $this->eventmodel->get();
+		$data['events'] = $this->EventModel->get();
 
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
@@ -43,8 +43,8 @@ class Event extends CI_Controller
 
 	public function detail($id)
 	{
-		$data['detail'] = $this->eventmodel->detail($id);
-		$data['tickets'] = $this->eventmodel->getEventTicket($id);
+		$data['detail'] = $this->EventModel->detail($id);
+		$data['tickets'] = $this->EventModel->getEventTicket($id);
 
 		// check event harus aktif dan verified
 		if ($data['detail']['is_active'] == 1 && $data['detail']['status_id'] == 1){

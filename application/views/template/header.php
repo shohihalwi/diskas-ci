@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="<?= base_url() ?>">
                 <img src="<?= base_url('assets/images/eventmercubuana-logo.svg') ?>" alt="logo mercubuana" style="height: 38px; margin-right: 8px">
 
-                <span class="g-sans-regular">Mercu Buana Events</span>
+                <span class="g-sans-regular">UMB Event</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
