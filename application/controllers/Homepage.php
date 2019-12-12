@@ -12,6 +12,7 @@ class Homepage extends CI_Controller
 		$this->load->model('faqmodel');
 		$this->load->model('eventmodel');
 		$this->load->model('kategorimodel');
+		$this->load->model('contactusModel');
 	}
 
 
@@ -41,6 +42,18 @@ class Homepage extends CI_Controller
 		$this->load->view('template/meta-header');
 		$this->load->view('template/header');
 		$this->load->view('FAQ', $data); // conten utama
+		$this->load->view('template/footer');
+	}
+	public function contactus()
+	{
+		$data['title'] = "Frequently Ask Questions";
+		$data['deskripsi'] = "Pertanyaan Yang Sering Ditanyakan";
+		//manggil model faq yang method get();
+		$data['master_contacts'] = $this->contactusModel->get();
+
+		$this->load->view('template/meta-header');
+		$this->load->view('template/header');
+		$this->load->view('contact_us', $data); // conten utama
 		$this->load->view('template/footer');
 	}
 }

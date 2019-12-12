@@ -20,8 +20,10 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2019 Copyright:
-          <a href="http://mercubuana.ac.id"> mercubuana | diskas team</a>
+          <a href="http://mercubuana.ac.id"> mercubuana</a> | <a href="<?= base_url("homepage/contactus") ?>">diskas
+              team</a> <a href="<?= base_url("homepage/contactus") ?>"><i class="fab fa-instagram"></i></a>
       </div>
+
       <!-- Copyright -->
 
   </footer>
