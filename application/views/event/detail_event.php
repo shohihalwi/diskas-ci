@@ -50,12 +50,16 @@
                                 <div class="col-8 p-2">
                                     <h5 class="mb-0"><?= $value['ticket_name'] ?></h5>
                                 </div>
-                                <div class="col-4 p-2">
+                                <div class="col-md-4 p-2">
                                     <div class="text-right">
                                         <strong>
                                             <?php if ($value['price'] > 0){ ?>
                                                 Rp<?= number_format($value['price']) ?>
-                                            <?php } ?>
+                                            <?php }else{
+                                                ?>
+                                                @Free
+                                            <?php
+                                            } ?>
 
                                         </strong></div>
                                 </div>
@@ -71,11 +75,11 @@
                                         <?php } ?>
                                     </div>
                                 </div>
-                                <div class="col-4 p-2">
+                                <div class="col-md-4 p-2">
                                     <?php if ($value['price'] <= 0){ ?>
-                                        <a href="<?= linkToApp('checkout/'. $detail['id'] ."/". $value['id']) ?>" class="btn btn-success btn-sm rounded float-right">GRATIS</a>
+                                        <a href="<?= linkToApp('checkout/'. $detail['id'] ."/". $value['id']) ?>" class="btn btn-success rounded float-right">Register</a>
                                     <?php }else{ ?>
-                                        <a href="<?= linkToApp('checkout/'. $detail['id'] ."/". $value['id']) ?>" class="btn btn-primary btn-sm rounded float-right">Beli</a>
+                                        <a href="<?= linkToApp('checkout/'. $detail['id'] ."/". $value['id']) ?>" class="btn btn-primary rounded float-right">Register</a>
                                     <?php }?>
                                 </div>
                             </div>

@@ -1,8 +1,8 @@
   <!-- Footer -->
-  <footer class="page-footer font-small unique-color-dark pt-5">
+  <footer class=" font-small pt-5">
 
       <!-- Footer Elements -->
-      <div class="container">
+      <div class="container d-none">
 
           <!-- Call to action -->
           <ul class="list-unstyled list-inline text-center py-2">
